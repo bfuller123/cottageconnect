@@ -39,5 +39,5 @@ So you focus on making the best items you can, and let us handle bringing your c
 
   #### [Brett Fuller](https://github.com/bfuller123)
   #### [Conrad Harrison](https://github.com/RadCon4)
-  #### [Kim Kaufman](#)
-  #### [David Staas](#)
+  #### [Kim Kaufman](https://github.com/kimgomizzou)
+  #### [David Staas](https://github.com/DavidStaas)
