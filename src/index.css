@@ -3,3 +3,17 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+ul {
+  width: 66%;
+  margin-left: 15%;
+  list-style: none;
+}
+
+li {
+  padding: 15px;
+}
+
+li:nth-child(2n){
+  background-color: lightgray;
+}
