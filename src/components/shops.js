@@ -1,5 +1,5 @@
 import React from 'react';
-import List from './list';
+import Card from './card';
 let shops = [
   {
     name: "Brett's Burgers",
@@ -27,7 +27,7 @@ class Shops extends React.Component {
   render() {
     //taking a list and mapping into a new list that contains every list item
     const list = shops.map((item) => (
-      <List name={item.name} image={item.image} address={item.address}/>
+      <Card name={item.name} image={item.image} address={item.address}/>
     ));
 
     //since React can render based on Arrays, we throw in the list of list items to be rendered

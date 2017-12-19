@@ -1,6 +1,8 @@
 import React from 'react';
 
-class List extends React.Component {
+//TODO: Need to make it so the name of shop only shows X amount of characters
+
+class Card extends React.Component {
   render() {
     return(
       <div className="card">
@@ -14,4 +16,4 @@ class List extends React.Component {
   }
 }
 
-export default List;
+export default Card;
