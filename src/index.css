@@ -4,16 +4,26 @@ body {
   font-family: sans-serif;
 }
 
-ul {
-  width: 66%;
-  margin-left: 15%;
-  list-style: none;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-li {
-  padding: 15px;
+.card {
+  padding: 4%;
+  border: 2px solid gray;
+  max-width: 350px;
+  max-height: 100px;
+  margin-top: 30px;
 }
 
-li:nth-child(2n){
-  background-color: lightgray;
+.cardImage {
+  float:left;
+  height: 100px;
+  width: 100px;
+}
+
+.cardDetails {
+  float: right;
 }
