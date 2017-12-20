@@ -27,3 +27,12 @@ body {
 .cardDetails {
   float: right;
 }
+
+.search {
+  display: inline;
+  margin: 0.15%;
+}
+
+.searchInput {
+  width: 300px;
+}
