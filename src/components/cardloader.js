@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './card';
 
+//this will later become data from the backend
 let shops = [
   {
     name: "Brett's Burgers",
@@ -21,13 +22,17 @@ let shops = [
     name: "David's Doughs",
     image:"https://images-na.ssl-images-amazon.com/images/I/51mpGRim00L._SX355_.jpg",
     address:"350 Yeast Ct Addison, TX"
-  },
+  }
 ];
 
-class Shops extends React.Component {
+class Cardloader extends React.Component {
+  state = {
+    itemsForCards: shops
+  }
+
   render() {
     //taking a list and mapping into a new list that contains every list item
-    const list = shops.map((item) => (
+    const list = this.state.itemsForCards.map((item) => (
       <Card name={item.name} image={item.image} address={item.address}/>
     ));
 
@@ -40,4 +45,4 @@ class Shops extends React.Component {
   }
 }
 
-export default Shops;
+export default Cardloader;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Shops from './components/shops'
+import Cardloader from './components/cardloader'
 import Searchbar from './components/searchbar'
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
           <h3>Connecting People with Homemade Products</h3>
           <Searchbar />
         </header>
-        <Shops />
+        <Cardloader />
       </div>
     );
   }
