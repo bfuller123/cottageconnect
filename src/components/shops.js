@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './card';
+
 let shops = [
   {
     name: "Brett's Burgers",
@@ -31,7 +32,11 @@ class Shops extends React.Component {
     ));
 
     //since React can render based on Arrays, we throw in the list of list items to be rendered
-    return(<div className="cards">{list}</div>);
+    return(
+      <div className="cards">
+        {list}
+      </div>
+    );
   }
 }
 
