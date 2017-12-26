@@ -42,20 +42,4 @@ When editing the files, run the following command for webpack to watch your file
 $ yarn run bundle
 ```
 
-## Screenshots
 
-Home page before login:
-
-![Alt Home Page](/README/home.png?raw=true)
-
-Sign up page:
-
-![Alt Signup Page](/README/signup.png?raw=true)
-
-Login page:
-
-![Alt Login Page](/README/login.png?raw=true)
-
-Dashboard which is only accessible after login:
-
-![Alt Dashboard](/README/dashboard.png?raw=true)
