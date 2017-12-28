@@ -4,13 +4,13 @@ import MerchantPortal from './merchantportal';
 
 class PortalLoader extends React.Component {
   state = {
-    user: 'customer',
+    user: 'merchant',
     username: 'Andrew',
     password: 'testPassword',
     profilePicture: null,
     messages: [{user:'Conrad Coffees', message:`Let's meet at...`}, {user:`Kim's Kookies`, message:`Hope you enjoy the cookies!`}],
     searches: ['Cookies', 'Coffee', 'Bread'],
-    reviews: [{merchant:`David's Doughs`, review:`Delicious!`, rating: `5`}],
+    reviews: [{merchant:`David's Doughs`, user:`Bob`, review:`Delicious!`, rating: `5`}],
     savedMerchants: []
   }
 
@@ -19,7 +19,7 @@ class PortalLoader extends React.Component {
       return(<CustomerPortal username={this.state.username} merchants={this.state.savedMerchants} searches={this.state.searches} messages={this.state.messages} reviews={this.state.reviews} />)
     }
     else {
-       return(<MerchantPortal />)
+       return(<MerchantPortal merchant={this.state.username} messages={this.state.messages} reviews={this.state.reviews}/>)
     }
   }
 }
