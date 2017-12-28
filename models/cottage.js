@@ -7,11 +7,12 @@ const Schema = mongoose.Schema;
 // Using the Schema constructor, create a new MerchantSchema object
 const CottageSchema = new Schema({
 
-    userName: {type: String, required: true, index: {{unique: true}}},
+    userName: {type: String, required: true, index: {unique: true}},
     password: {type: String, required: true},
     isMerchant: {type: Boolean, default: false},
     isCustomer: {type: Boolean, default: false},
     businessName: {type: String, required: false},
+    businessCategory: {type: String, required: false},
     website: {type: String, required: false},
     email: {type: String, required: false},
     streetAddress1:{type: String, required: false},
@@ -21,7 +22,9 @@ const CottageSchema = new Schema({
     county:{type: String, required: false},
     zipCode:{type: String, required: false},
     country:{type: String, required: false},
-    phoneNumber:{type: String, required: false},
+    longitude: {type: Number, required: false},
+    latitude: {type: Number, required: false, default: 0},
+    phoneNumber:{type: String, required: false, default: 0},
     firstName:{type: String, required: false}, 
     middleName:{type: String, required: false}, 
     lastName:{type: String, required: false}
