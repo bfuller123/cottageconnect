@@ -1,0 +1,10 @@
+.navbar{
+  background: #486a7d;
+  /*box-shadow: 0 3px 6px #999, 0 3px 6px #999;*/
+}
+
+a, .navbar a{
+  color: #fff;
+  font-size: 24px;
+}
+
