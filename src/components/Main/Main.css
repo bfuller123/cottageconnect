@@ -2,7 +2,7 @@ img{
 	width: 100%;
 }
 
-h1{
+.MainH1{
 	text-align: center;
 	font-size: 72px;
 	font-weight: bold;
@@ -12,7 +12,11 @@ h1{
 	position: absolute;
 }
 
-h2{
+.MainH2{
 	text-align: center;
 	font-size: 25px;
+	top: 450px;
+	right: 450px;
+	z-index: 1;
+	position: absolute;	
 }

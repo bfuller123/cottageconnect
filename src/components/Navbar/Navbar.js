@@ -4,7 +4,7 @@ import "./Navbar.css";
 class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-default">
+      <nav className="navbar navbar-default navbar-fixed-top">
           <div className="container-fluid">
               <div className = "navbar-header">
                   <a className="navbar-brand" href="/">Like Mom Made</a>
@@ -22,7 +22,3 @@ class Navbar extends Component {
 }
 
 export default Navbar;
-
-
-
-
