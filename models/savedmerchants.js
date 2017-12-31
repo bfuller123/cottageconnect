@@ -15,7 +15,7 @@ const SavedMerchantsSchema = new Schema({
 });
 
 // This creates our model from the above schema, using mongoose's model method
-const SavedMerchants = mongoose.model("SavedMerchants", CategorySchema);
+const SavedMerchants = mongoose.model("SavedMerchants", SavedMerchantsSchema);
 
 // Export the Note model
 module.exports = SavedMerchants;
