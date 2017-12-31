@@ -28,20 +28,19 @@ class Search extends Component {
     return (
 		<div className="SearchBox">
 			<div className="SearchCenter">
-				<h1 className="SearchHed">Quick Search of Your Area</h1>
-			</div>	
-	    	<form>
-        		<p>Search: {this.state.search}</p>
-        		<input
-          		type="text"
-          		placeholder="Type in a zip code or city"
-          		name="search"
-          		value={this.state.search}
-          		onChange={this.handleInputChange}
-        		/>
-        		<button onClick={this.handleFormSubmit}>Submit</button>
-      		</form>
-    	</div>  
+				<h1 className="SearchHed">What cottages are in your Area?</h1>
+		    	<form className="SearchQuick">
+	         		<input
+	          		type="text"
+	          		placeholder="Type in a zip code or city name"
+	          		name="search"
+	          		value={this.state.search}
+	          		onChange={this.handleInputChange}
+	        		/>
+	        		<button onClick={this.handleFormSubmit}>Submit</button>
+	      		</form>
+	    	</div>
+	    </div>	  
     );
   }
 }
