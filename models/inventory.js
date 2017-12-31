@@ -12,7 +12,9 @@ const InventorySchema = new Schema({
     sortOrder: {type: Number, required: false},
 
     // `cottageID` is a foreign key that stores an Cottage id
-    cottageID: {type: Schema.Types.ObjectId, ref: "Cottage", required: true}
+    cottageId: {type: Schema.Types.ObjectId, ref: "Cottage", required: true},
+    // `categoryId:` is a foreign key that stores a Food Category id
+    categoryId: {type: Schema.Types.ObjectId, ref: "Category", required: false}
 });
 
 // This creates our model from the above schema, using mongoose's model method

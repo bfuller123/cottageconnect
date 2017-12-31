@@ -27,24 +27,24 @@ db.Cottage.find()
             reviewScore: 0,
             subject: "Pricing",
             messageText: "How much do your Pizza Eclairs cost?",
-            senderID: customer1Id,
-            toID: merchant1Id
+            senderId: customer1Id,
+            toId: merchant1Id
         },
         {
             messageType: "Chat",
             reviewScore: 0,
             subject: "Caramels",
             messageText: "Can I get vegan caramels?",
-            senderID: customer2Id,
-            toID: merchant2Id
+            senderId: customer2Id,
+            toId: merchant2Id
         },
         {
             messageType: "Review",
             reviewScore: 3,
             subject: "It is NOT PIZZA!!!",
             messageText: "Tastes good, but it has pineapple on it! Therefore it is NOT pizza!!!!!",
-            senderID: customer3Id,
-            toID: merchant3Id
+            senderId: customer3Id,
+            toId: merchant3Id
         }
     ];
 

@@ -53,14 +53,33 @@ module.exports = {
 
   findMerchantInventory: function(req, res) {
     db.Inventory
-      .find(req.query)
-      .sort({ sortOrder: 1 })
+      .find({cottageId: req.params.id})
+      .sort({ sortOrder: 1 }) 
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  updateInventory: function(req, res) {
+    db.Inventory
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  createInventory: function(req, res) {
+    db.Inventory
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  removeInventory: function(req, res) {
+    db.Inventory
+      .findById({ _id: req.params.id })
+      .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
 
   //==========================================
-  // ccMessage Routes:
+  // Message Routes:
   //==========================================
 
   findMessagesTo: function(req, res) {

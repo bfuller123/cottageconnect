@@ -23,55 +23,61 @@ db.Cottage.find()
             productName: "Breakfast #1",
             description: "Egg and bacon",
             sortOrder: 1,
-            cottageID: merchant1Id
+            cottageId: merchant1Id
         },
         {
             productName: "Breakfast #2",
             description: "Egg, sausage, and bacon",
             sortOrder: 2,
-            cottageID: merchant1Id
+            cottageId: merchant1Id
         },
         {
             productName: "Breakfast #3",
-            description: "Spam, eggs, sausage and spam",
+            description: "Egg and spam",
             sortOrder: 3,
-            cottageID: merchant1Id
+            cottageId: merchant1Id
         },
         {
             productName: "Breakfast #4",
             description: "Egg, bacon, and spam",
             sortOrder: 4,
-            cottageID: merchant2Id
+            cottageId: merchant2Id
         },
         {
             productName: "Breakfast #5",
-            description: "Egg, bacon, sausage, and spam",
+            description: "Egg, bacon, sausage and spam",
             sortOrder: 5,
-            cottageID: merchant2Id
+            cottageId: merchant2Id
         },
         {
             productName: "Breakfast #6",
-            description: "Spam, bacon, sausage, and spam",
+            description: "Spam, bacon, sausage and spam",
             sortOrder: 6,
-            cottageID: merchant2Id
+            cottageId: merchant2Id
         },
         {
             productName: "Breakfast #7",
             description: "Spam, egg, spam, spam, bacon, and spam",
             sortOrder: 7,
-            cottageID: merchant3Id
+            cottageId: merchant3Id
         },
         {
             productName: "Breakfast #8",
             description: "Spam, spam, spam, egg, and spam",
             sortOrder: 8,
-            cottageID: merchant3Id
+            cottageId: merchant3Id
         },
         {
             productName: "Breakfast #9",
-            description: "Lobster Thermidor a Crevette with a mornay sauce served in a Provencale manner with shallots and aubergines garnished with truffle pate, brandy and with a fried egg on top and spam",
+            description: "Spam, spam, spam, spam, spam, spam, baked beans, spam, spam, spam, and spam",
             sortOrder: 9,
-            cottageID: merchant3Id
+            cottageId: merchant3Id
+        },
+        {
+            productName: "Breakfast #10",
+            description: "Lobster Thermidor aux Crevettes with a mornay sauce served in a Provencale manner with shallots and aubergines garnished with truffle pate, brandy and with a fried egg on top and spam",
+            sortOrder: 10,
+            cottageId: merchant3Id
         },
 
     ];
