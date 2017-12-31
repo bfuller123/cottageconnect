@@ -11,7 +11,7 @@ const InventorySchema = new Schema({
     description: {type: String, required: false},
     sortOrder: {type: Number, required: false},
 
-    // `cottageID` is a foreign key that stores an Cottage id
+    // `cottageID` is a foreign key that stores a Cottage id
     cottageId: {type: Schema.Types.ObjectId, ref: "Cottage", required: true},
     // `categoryId:` is a foreign key that stores a Food Category id
     categoryId: {type: Schema.Types.ObjectId, ref: "Category", required: false}

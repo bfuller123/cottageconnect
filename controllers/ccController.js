@@ -16,7 +16,7 @@ module.exports = {
   },
   findAllCustomers: function(req, res) {
     db.Cottage
-      .find({isCustomer: true})
+      .find({isActiveCustomer: true})
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
