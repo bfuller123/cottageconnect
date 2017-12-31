@@ -1,20 +1,20 @@
-.AboutBox {
-    background-color: #fede8a;
+.SearchBox {
+    background-color: #eeba7e;
 	height: 400px;
 	margin-top: 6px;
 	position: relative;
 }
 
-.AboutHed{
+.SearchHed{
 	text-align: center;
 }
 
-.AboutText{
+.SearchText{
 	text-align: center;
 	font-size: 18px;
 }
 
-.AboutCenter{
+.SearchCenter{
 	width: 60%; 
 	position: absolute;
 	top: 20%;
