@@ -15,7 +15,7 @@ const SavedSearchesSchema = new Schema({
 });
 
 // This creates our model from the above schema, using mongoose's model method
-const SavedSearches = mongoose.model("SavedSearches", CategorySchema);
+const SavedSearches = mongoose.model("SavedSearches", SavedSearchesSchema);
 
 // Export the Note model
 module.exports = SavedSearches;

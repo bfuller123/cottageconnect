@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new InventorySchema object
 const CategorySchema = new Schema({
-    CategoryName: {type: String, required: true},
+    categoryName: {type: String, required: true},
 });
 
 // This creates our model from the above schema, using mongoose's model method

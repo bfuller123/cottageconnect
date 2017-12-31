@@ -79,6 +79,97 @@ module.exports = {
   },
 
   //==========================================
+  // Category Routes:
+  //==========================================
+
+  findAllCategories: function(req, res) {
+    db.Category
+      .find({})
+      .sort({categoryName: 1 }) 
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  updateCategory: function(req, res) {
+    db.Category
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  createCategory: function(req, res) {
+    db.Category
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  removeCategory: function(req, res) {
+    db.Category
+      .findById({ _id: req.params.id })
+      .then(dbModel => dbModel.remove())
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  //==========================================
+  // Saved Searches Routes:
+  //==========================================
+
+  findSavedSearches: function(req, res) {
+    db.SavedSearches
+      .find({customerId: req.params.id})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  updateSavedSearches: function(req, res) {
+    db.SavedSearches
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  createSavedSearches: function(req, res) {
+    db.SavedSearches
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  removeSavedSearches: function(req, res) {
+    db.SavedSearches
+      .findById({ _id: req.params.id })
+      .then(dbModel => dbModel.remove())
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  //==========================================
+  // Saved Merchants Routes:
+  //==========================================
+
+  findSavedMerchants: function(req, res) {
+    db.SavedMerchants
+      .find({customerId: req.params.id})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  updateSavedMerchants: function(req, res) {
+    db.SavedMerchants
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  createSavedMerchants: function(req, res) {
+    db.SavedMerchants
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  removeSavedMerchants: function(req, res) {
+    db.SavedMerchants
+      .findById({ _id: req.params.id })
+      .then(dbModel => dbModel.remove())
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  //==========================================
   // Message Routes:
   //==========================================
 

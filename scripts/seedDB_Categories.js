@@ -12,26 +12,26 @@ mongoose.connect(
 );
 
 const CategorySeed = [
-    {CategoryName: "Breads, rolls, biscuits"},
-    {CategoryName: "Sweet breads, muffins"},
-    {CategoryName: "Cakes"},
-    {CategoryName: "Pastries"},
-    {CategoryName: "Cookies"},
-    {CategoryName: "Candy"},
-    {CategoryName: "Coated and uncoated nuts"},
-    {CategoryName: "Unroasted nut butters"},
-    {CategoryName: "Fruit butters"},
-    {CategoryName: "Canned jams or jellies"},
-    {CategoryName: "Fruit pies"},
-    {CategoryName: "Dehydrated fruit or vegetables, including dried beans"},
-    {CategoryName: "Popcorn and popcorn snacks"},
-    {CategoryName: "Cereal, including granola"},
-    {CategoryName: "Dry mixes"},
-    {CategoryName: "Vinegar"},
-    {CategoryName: "Pickles"},
-    {CategoryName: "Mustard"},
-    {CategoryName: "Roasted coffee or dry tea"},
-    {CategoryName: "Dried herbs and dried herb mixtures"}
+    {categoryName: "Breads, rolls, biscuits"},
+    {categoryName: "Sweet breads, muffins"},
+    {categoryName: "Cakes"},
+    {categoryName: "Pastries"},
+    {categoryName: "Cookies"},
+    {categoryName: "Candy"},
+    {categoryName: "Coated and uncoated nuts"},
+    {categoryName: "Unroasted nut butters"},
+    {categoryName: "Fruit butters"},
+    {categoryName: "Canned jams or jellies"},
+    {categoryName: "Fruit pies"},
+    {categoryName: "Dehydrated fruit or vegetables, including dried beans"},
+    {categoryName: "Popcorn and popcorn snacks"},
+    {categoryName: "Cereal, including granola"},
+    {categoryName: "Dry mixes"},
+    {categoryName: "Vinegar"},
+    {categoryName: "Pickles"},
+    {categoryName: "Mustard"},
+    {categoryName: "Roasted coffee or dry tea"},
+    {categoryName: "Dried herbs and dried herb mixtures"}
 ];
 
 db.Category
