@@ -4,7 +4,7 @@ import "./Search.css";
 class Searchbar extends React.Component {
   render() {
     return(
-      <form className="SearchBox">
+      <form className="SearchBox" id="Search">
         <div className="SearchCenter">
           <h1 className="SearchHed">Quick Search of your Area</h1>
           <h3 className="search seachHeader">Food</h3>
