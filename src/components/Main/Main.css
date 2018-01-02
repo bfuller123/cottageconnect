@@ -6,6 +6,11 @@
 }
 
 .MainH1{
-	font-size: 72px;
-	font-style: cursive;
+	font-size: 150px;
+	font-family: 'Dr Sugiyama', cursive;
+}
+
+.MainH2{
+	font-size: 50px;
+	font-family: 'Dr Sugiyama', cursive;
 }

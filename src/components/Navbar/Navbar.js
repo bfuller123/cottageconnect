@@ -10,9 +10,8 @@ class Navbar extends Component {
             <a className="navbar-brand" href="#">Cottage Connect</a>
           </div>
           <ul className="nav navbar-nav">
-            <li className="active"><a href="#">Home</a></li>
-            <li><a href="./About">About</a></li>
-            <li><a href="./Search">Search</a></li>
+            <li><a href="#About" className="active">About</a></li>
+            <li><a href="#Search">Search</a></li>
             <li><a href="#">Log In</a></li>
           </ul>
         </div>
