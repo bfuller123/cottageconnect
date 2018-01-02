@@ -2,16 +2,11 @@
   	background: #486a7d;
 }
 
-a, .navbar a{
-  	font-size: 24px;
+.navbar a{
+  	font-size: 20px;
+  	color: #fff;
 }
 
-/*
-.navbar-brand a{
-	color: #fff;
-}*/
-
-/*
-li{
-	color: #fff;
-}*/
+a:hover{
+	color: #000;
+}
