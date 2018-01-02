@@ -21,12 +21,12 @@ const ccMessageSchema = new Schema({
 
     // `senderID` is a foreign key that stores the Cottage id
     // of the message sender or reviewer
-    senderID: {type: Schema.Types.ObjectId,ref: "Cottage",required: true},
+    senderId: {type: Schema.Types.ObjectId,ref: "Cottage",required: true},
 
     // `toID` is a foreign key that stores an Cottage id that the message
     // is to be sent to, or in the case of messageType="Review", the 
     // Cottage id of the merchant that the review is about.
-    toID: {type: Schema.Types.ObjectId,ref: "Cottage",required: true}
+    toId: {type: Schema.Types.ObjectId,ref: "Cottage",required: true}
 
 });
 

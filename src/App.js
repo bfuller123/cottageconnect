@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
-import './App.css';
-import Cardloader from './components/cardloader';
-import Searchbar from './components/searchbar';
-import PortalLoader from './components/portalloader';
 
-// TODO: Move PortalLoader to its own page!
+import Navbar from "./components/Navbar";
+import Main from "./components/Main";
+import About from "./components/About";
+import Footer from "./components/Footer";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Cottage Connect</h1>
-          <h3>Connecting People with Homemade Products</h3>
-          <button id="sign-up btn">Sign Up</button>
-          <button id="sign-in btn">Sign In</button>
-          <Searchbar />
-        </header>
-        <Cardloader />
-        <PortalLoader />
-      </div>
+      <div>
+        <Navbar />
+        <Main />
+        <About />
+        <Footer />
+    </div>
     );
   }
 }
