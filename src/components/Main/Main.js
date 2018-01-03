@@ -13,15 +13,12 @@ class Main extends Component {
   render() {
     return (
     	<section style={ mainStyle }>
-
 		    <div className="row">
-		    	<div className="col-lg-6 mx-auto">
-      				<div className="MainHeads">
-      					<h1 className="MainH1">Cottage Connect</h1>
-      					<h2 className="MainH2">Uniting people with homemade products</h2>
-      				</div>
-      			</div>
-   			</div>	
+   				<div className="MainHeads">
+   					<h1 className="MainH1">Cottage Connect</h1>
+   					<h2 className="MainH2">Uniting people with homemade products</h2>
+   				</div>
+  			</div>	
 
       </section>
     );
