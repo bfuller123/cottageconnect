@@ -1,6 +1,7 @@
 import React from 'react';
 import CustomerPortal from './customerportal';
 import MerchantPortal from './merchantportal';
+import "./Portalloader.css";
 
 class PortalLoader extends React.Component {
   state = {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './card';
+import "./Cardloader.css";
 
 //this will later become data from the backend
 let shops = [
