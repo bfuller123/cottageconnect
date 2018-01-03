@@ -1,4 +1,6 @@
 import React from 'react';
+import "./Customerportal.css";
+
 
 class CustomerPortal extends React.Component {
 
