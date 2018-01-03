@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Card.css";
 
 //TODO: Need to make it so the name of shop only shows X amount of characters
 
