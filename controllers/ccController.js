@@ -1,4 +1,9 @@
 const db = require("../models");
+const mongoose = require('mongoose');
+
+mongoose.Promise = Promise;
+mongoose.connect("mongodb://heroku_bx92v1q4:f6lvg45a5ulejd6mtdl6epq04u@ds161048.mlab.com:61048/heroku_bx92v1q4");
+
 
 // Defining methods for the ccController
 module.exports = {
@@ -54,7 +59,7 @@ module.exports = {
   findMerchantInventory: function(req, res) {
     db.Inventory
       .find({cottageId: req.params.id})
-      .sort({ sortOrder: 1 }) 
+      .sort({ sortOrder: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -85,7 +90,7 @@ module.exports = {
   findAllCategories: function(req, res) {
     db.Category
       .find({})
-      .sort({categoryName: 1 }) 
+      .sort({categoryName: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

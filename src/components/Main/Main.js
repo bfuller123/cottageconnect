@@ -1,13 +1,31 @@
-//sets up the reusable Jumbotron component
-import React from "react";
+//sets up the reusable Main component
+import React, { Component } from "react";
 import "./Main.css";
+import Background from "../../images/cover2.jpg";
 
-const Main = () => (
-	<div className = "Main">
-		<img src={require("../../images/cover.jpg")} />
-		<h1 className="MainH1">Cottage Connect</h1>
-		<h2 className="MainH2">Uniting people with homemade products</h2>
-	</div>
-);
+var mainStyle = {
+  width: "100%",
+  height: "1000px",
+  backgroundImage: "url(" + Background + ")"
+};
+
+class Main extends Component {
+  render() {
+    return (
+    	<section style={ mainStyle }>
+
+		    <div className="row">
+		    	<div className="col-lg-6 mx-auto">
+      				<div className="MainHeads">
+      					<h1 className="MainH1">Cottage Connect</h1>
+      					<h2 className="MainH2">Uniting people with homemade products</h2>
+      				</div>
+      			</div>
+   			</div>	
+
+      </section>
+    );
+  }
+}
 
 export default Main;

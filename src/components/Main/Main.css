@@ -1,22 +1,16 @@
-img{
-	width: 100%;
-}
-
-.MainH1{
+.MainHeads{
 	text-align: center;
-	font-size: 72px;
-	font-weight: bold;
-	top: 350px;
-	right: 350px;
-	z-index: 1;
+	top: 300px;
+	left: 600px;
 	position: absolute;
 }
 
+.MainH1{
+	font-size: 150px;
+	font-family: 'Dr Sugiyama', cursive;
+}
+
 .MainH2{
-	text-align: center;
-	font-size: 25px;
-	top: 450px;
-	right: 450px;
-	z-index: 1;
-	position: absolute;	
+	font-size: 50px;
+	font-family: 'Dr Sugiyama', cursive;
 }

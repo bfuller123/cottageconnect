@@ -1,7 +1,8 @@
 .AboutBox {
     background-color: #fede8a;
-	height: 500px;
+	height: 400px;
 	margin-top: 6px;
+	position: relative;
 }
 
 .AboutHed{
@@ -14,7 +15,8 @@
 }
 
 .AboutCenter{
-	margin: 0 auto;
-	width: 50%; 
-	padding-top: 100px;
+	width: 60%; 
+	position: absolute;
+	top: 20%;
+	left: 20%;
 }
