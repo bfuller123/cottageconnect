@@ -69,7 +69,7 @@ const cottageSeed = [
         city: "Waco",
         stateOrProvince: "TX",
         zipCode: "76219",
-        county: "Waco"
+        county: "Waco",
         phoneNumber:"214-442-2334",
         firstName:"Rhonda", 
         lastName:"Fonda",
@@ -88,7 +88,7 @@ const cottageSeed = [
         city: "Dallas",
         stateOrProvince: "TX",
         zipCode: "75287",
-        county: "Dallas"        
+        county: "Dallas",        
         longitude: -96.7234,
         latitude: 32.4234,
         phoneNumber:"972-432-6742",
