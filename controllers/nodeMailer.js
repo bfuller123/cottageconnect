@@ -1,3 +1,5 @@
+import React from "react";
+
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
@@ -43,4 +45,4 @@ transporter.sendMail(mailOptions, function(error, info){
   }
 });
 
-module.exports = nodeMailer;
+export default nodeMailer;
