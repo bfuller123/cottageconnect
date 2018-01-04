@@ -31,10 +31,10 @@ db.Cottage.find()
             toId: merchant1Id
         },
         {
-            messageType: "Chat",
+            messageType: "Review",
             reviewScore: 0,
             subject: "Caramels",
-            messageText: "Can I get vegan caramels?",
+            messageText: "Can I get vegan caramels? NO! They said THERE'S NO SUCH THING!!! They were MEAN TO ME!!!",
             senderId: customer2Id,
             toId: merchant2Id
         },

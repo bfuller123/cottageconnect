@@ -2,7 +2,14 @@ const db = require("../models");
 const mongoose = require('mongoose');
 
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://heroku_bx92v1q4:f6lvg45a5ulejd6mtdl6epq04u@ds161048.mlab.com:61048/heroku_bx92v1q4");
+// mongoose.connect("mongodb://heroku_bx92v1q4:f6lvg45a5ulejd6mtdl6epq04u@ds161048.mlab.com:61048/heroku_bx92v1q4");
+
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/cottageconnect",
+  {
+    useMongoClient: true
+  }
+);
 
 
 // Defining methods for the ccController
@@ -180,24 +187,47 @@ module.exports = {
 
   findMessagesTo: function(req, res) {
     db.ccMessage
-      .find(req.query)
+      .find({toId: req.params.id, messageType: "Email"})
       .sort({ sortOrder: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findMessagesFrom: function(req, res) {
     db.ccMessage
-      .find(req.query)
+      .find({senderId: req.params.id, messageType: "Email"})
       .sort({ sortOrder: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findMerchantReviews: function(req, res) {
     db.ccMessage
-      .find(req.query)
+      .find({toId: req.params.id, messageType: "Review"})
       .sort({ sortOrder: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+
+  createMessage: function(req, res) {
+    db.ccMessage
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  updateMessage: function(req, res) {
+    db.ccMessage
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  removeMessage: function(req, res) {
+    db.ccMessage
+      .findById({ _id: req.params.id })
+      .then(dbModel => dbModel.remove())
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
   }
+
 
 };
