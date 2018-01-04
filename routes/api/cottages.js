@@ -79,4 +79,25 @@ router.route("/savedmerchants")
   // Message Routes:
   //==========================================
 
+// Matches with "/api/cottages/emailsto/:id
+router.route("/emailsto/:id")
+	.get(ccController.findMessagesTo);
+
+// Matches with "/api/cottages/emailsto/:id
+router.route("/emailsfrom/:id")
+	.get(ccController.findMessagesFrom);
+
+// Matches with "/api/cottages/emailsto/:id
+router.route("/merchantreviews/:id")
+	.get(ccController.findMerchantReviews);
+
+// Matches with "/api/ccmessages
+router.route("/ccmessages")
+	.post(ccController.createMessage);
+
+// Matches with "/api/ccmessages/:id
+router.route("/ccmessages/:id")
+	.put(ccController.updateMessage)
+	.delete(ccController.removeMessage);
+
 module.exports = router;
