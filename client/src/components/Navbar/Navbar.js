@@ -7,12 +7,12 @@ class Navbar extends Component {
       <nav className="navbar navbar-fixed-top">
         <div className="container-fluid">
           <div className="navbar-header">
-            <a className="navbar-brand" href="#">Cottage Connect</a>
+            <a className="navbar-brand" href="/">Cottage Connect</a>
           </div>
           <ul className="nav navbar-nav">
-            <li><a href="#About" className="active">About</a></li>
-            <li><a href="#Search">Search</a></li>
-            <li><a href="#">Log In</a></li>
+            <li><a href="/#About" className="active">About</a></li>
+            <li><a href="/#Search">Search</a></li>
+            <li><a href="/login">Log In</a></li>
           </ul>
         </div>
       </nav>
