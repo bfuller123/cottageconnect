@@ -2,6 +2,8 @@ import React from 'react';
 import Auth from '../modules/Auth';
 import Dashboard from '../components/Dashboard.jsx';
 
+//TODO: Make it so it pulls in the information for the categories, goods, and address from the correct tables.
+
 
 class DashboardPage extends React.Component {
 
@@ -13,7 +15,10 @@ class DashboardPage extends React.Component {
 
     this.state = {
       secretData: '',
-      user: {}
+      user: {},
+      address: '123 Fake St Dallas TX 75214',
+      categories: ['Coffee', 'Tea', 'Donuts'],
+      goods: ['Whole Bean Coffee', 'Loose Leaf Tea', 'Chocolate Donut', 'Cake Donut']
     };
   }
 
@@ -42,7 +47,7 @@ class DashboardPage extends React.Component {
    * Render the component.
    */
   render() {
-    return (<Dashboard secretData={this.state.secretData} user={this.state.user} />);
+    return (<Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} />);
   }
 
 }
