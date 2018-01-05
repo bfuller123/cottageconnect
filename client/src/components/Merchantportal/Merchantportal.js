@@ -4,25 +4,32 @@ class MerchantPortal extends React.Component {
 
 
   render() {
-    let messages = this.props.messages.map((item) => (
-      <li>{item.user}: {item.message}</li>
+    let categories = this.props.categories.map((item) => (
+      <li><input type="text" value={item} /></li>
     ));
 
-    let reviews = this.props.reviews.map((item) => (
-      <li>{item.user}: {item.review}  ({item.rating} out of 5)</li>
+    let goods = this.props.goods.map((item) => (
+      <li><input type="text" value={item} /></li>
     ));
 
     return(
       <div>
       <h2>Welcome, {this.props.merchant}</h2>
-      <h4>Messages</h4>
+      <h4>Your Address</h4>
+      <input type="text" value={this.props.address} />
+      <h4>Your Email</h4>
+      <input type="text" value={this.props.email} />
+      <h4>Type of Shops</h4>
       <ul>
-        {messages}
+        {categories}
       </ul>
-      <h4>Your Reviews</h4>
+      <button id="addNewCategory">Add</button>
+      <h4>Your Merchandise</h4>
       <ul>
-        {reviews}
+        {goods}
       </ul>
+      <button id="addNewGood">Add</button>
+      <button>Update</button>
       </div>
     )
   }
