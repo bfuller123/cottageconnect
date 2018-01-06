@@ -19,3 +19,7 @@
 a:hover{
 	color: #000;
 }
+
+.navbar-toggle{
+	background: orange;
+}
