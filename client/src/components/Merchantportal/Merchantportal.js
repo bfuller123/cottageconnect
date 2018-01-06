@@ -14,6 +14,8 @@ class MerchantPortal extends React.Component {
 
     return(
       <div>
+      <br />
+      <br />
       <h2>Welcome, {this.props.merchant}</h2>
       <h4>Your Address</h4>
       <input type="text" value={this.props.address} />
@@ -23,13 +25,14 @@ class MerchantPortal extends React.Component {
       <ul>
         {categories}
       </ul>
-      <button id="addNewCategory">Add</button>
+      <button id="addNewCategory" onClick={this.props.addCategoryBtnClick}>Add</button>
       <h4>Your Merchandise</h4>
       <ul>
         {goods}
       </ul>
-      <button id="addNewGood">Add</button>
-      <button>Update</button>
+      <button id="addNewGood" onClick={this.props.addGoodBtnClick}>Add</button>
+      <br />
+      <button id="updateMerchantButton" onClick={this.props.submitBtnClick}>Update</button>
       </div>
     )
   }

@@ -43,11 +43,26 @@ class DashboardPage extends React.Component {
     xhr.send();
   }
 
+  updateMerchant(){
+    const xhr = new XMLHttpRequest();
+    xhr.open('get', '/api/updateMerchant?id=Brett');
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    // set the authorization HTTP header
+    xhr.setRequestHeader('Authorization', `bearer ${Auth.getToken()}`);
+    xhr.responseType = 'json';
+    xhr.addEventListener('load', () => {
+      if (xhr.status === 200) {
+        console.log(xhr.response.message);
+      }
+    });
+    xhr.send();
+  }
+
   /**
    * Render the component.
    */
   render() {
-    return (<Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} />);
+    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} /><button onClick={this.updateMerchant}>Click Me </button></div>);
   }
 
 }
