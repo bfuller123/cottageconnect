@@ -1,1 +1,20 @@
+.background{
+	background-image: url("./../../images/coverotherside.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    height: 1000px;
+}
 
+.MHede{
+	padding: 20px 0;
+}
+
+.MType{
+	font-family: sans-serif;
+	font-size: 140%;
+}
+
+ul{
+	list-style-type: none; 
+}

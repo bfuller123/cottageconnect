@@ -1,4 +1,5 @@
 import React from 'react';
+import "./MerchantPortal.css";
 
 class MerchantPortal extends React.Component {
 
@@ -13,23 +14,27 @@ class MerchantPortal extends React.Component {
     ));
 
     return(
-      <div>
-      <h2>Welcome, {this.props.merchant}</h2>
-      <h4>Your Address</h4>
-      <input type="text" value={this.props.address} />
-      <h4>Your Email</h4>
-      <input type="text" value={this.props.email} />
-      <h4>Type of Shops</h4>
-      <ul>
-        {categories}
-      </ul>
-      <button id="addNewCategory">Add</button>
-      <h4>Your Merchandise</h4>
-      <ul>
-        {goods}
-      </ul>
-      <button id="addNewGood">Add</button>
-      <button>Update</button>
+      <div className="background">
+
+        <div className="row">
+          <div className="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12">
+            <h2 className="MHede">Welcome, {this.props.merchant}</h2>
+            <h4 className="MType">Shop Address&#160;<input type="text" value={this.props.address} /></h4>
+            <h4 className="MType">Shop Email&#160;<input type="text" value={this.props.email} /></h4>
+            <h4 className="MType">Type of Shop&#160;
+              <ul>
+                {categories}
+              </ul></h4>
+              <button id="addNewCategory" className="btn btn-info btn-lg">Add</button>
+            <h4 className="MType">Shop's Merchandise
+              <ul>
+              {goods}
+              </ul></h4>
+              <button id="addNewGood" className="btn btn-info btn-lg">Add</button>&#160;&#160;
+              <button className="btn btn-info btn-lg">Update</button>
+          </div>
+        </div>
+
       </div>
     )
   }

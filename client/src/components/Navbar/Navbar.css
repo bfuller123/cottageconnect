@@ -1,12 +1,12 @@
 .navbar{
-  	background: #486a7d;
+  background: #486a7d;
 	margin-bottom: 0;
-    z-index: 9999;
+  z-index: 9999;
 }
 
 .navbar a{
-  	font-size: 20px;
-  	color: #fff;
+  font-size: 20px;
+  color: #fff;
 }
 
 .navbar-brand {
@@ -23,7 +23,7 @@ a:hover{
 }
 
 .navbar-toggle {
-    /*border-color: yellow;*/
-    color: #000 !important;
-	background: #e7ceaf;    
+  /*border-color: yellow;*/
+  color: #000 !important;
+	/*background: #e7ceaf;    */
 }

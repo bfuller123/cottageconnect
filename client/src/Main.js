@@ -90,7 +90,7 @@ class Main extends Component {
                            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
-                            <span className="icon-bar"></span> 
+                            <span className="icon-bar"></span>
                             </button>
 
                           <a className="navbar-brand" href="/">Cottage Connect</a>
