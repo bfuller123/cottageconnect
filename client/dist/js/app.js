@@ -15971,7 +15971,7 @@ var Searchbar = function (_React$Component) {
             "Area\xA0"
           ),
           _react2.default.createElement("input", { type: "text", className: "search searchInput", id: "searchCity", placeholder: "ex. Dallas, TX or 75202" }),
-          _react2.default.createElement("input", { type: "submit", className: "search searchButton", id: "searchSubmit", value: "search" })
+          _react2.default.createElement("input", { type: "submit", className: "search searchButton", id: "searchSubmit", value: "search", onClick: this.props.searchBtnHandleClick })
         )
       );
     }
@@ -16676,6 +16676,10 @@ var _Search = __webpack_require__(199);
 
 var _Search2 = _interopRequireDefault(_Search);
 
+var _axios = __webpack_require__(484);
+
+var _axios2 = _interopRequireDefault(_axios);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -16694,6 +16698,21 @@ var Landing = function (_React$Component) {
   }
 
   _createClass(Landing, [{
+    key: "sendInfo",
+    value: function sendInfo(e) {
+      e.preventDefault();
+      (0, _axios2.default)({
+        method: 'post',
+        url: '/send/info',
+        params: {
+          firstName: 'Brett',
+          lastName: 'Fuller'
+        }
+      }).then(function (response) {
+        console.log(response.data);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
@@ -16701,7 +16720,7 @@ var Landing = function (_React$Component) {
         null,
         _react2.default.createElement(_Main2.default, null),
         _react2.default.createElement(_About2.default, null),
-        _react2.default.createElement(_Search2.default, null)
+        _react2.default.createElement(_Search2.default, { searchBtnHandleClick: this.sendInfo })
       );
     }
   }]);
