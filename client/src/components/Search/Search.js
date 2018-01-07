@@ -11,8 +11,8 @@ class Searchbar extends React.Component {
           <input type="text" className="search searchInput" id="searchFood" placeholder="ex. cookies" />
           <h3 className="search seachHeader">Area&#160;</h3>
           <input type="text" className="search searchInput" id="searchCity" placeholder="ex. Dallas, TX or 75202" />
-          <input type="submit" className="search searchButton" id="searchSubmit" value="search" />
-        </div>   
+          <input type="submit" className="search searchButton" id="searchSubmit" value="search" onClick={this.props.searchBtnHandleClick}/>
+        </div>
       </form>
     )
   }
