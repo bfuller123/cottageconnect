@@ -59,6 +59,19 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
+//==========================================
+// Generic Merchant Search:
+// Receives a .query in the req for the criteria
+//==========================================
+
+  searchMerchants: function(req, res) {
+    db.Cottage
+      .find(req.query)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err)); 
+  },
+
+
   //==========================================
   // Inventory Routes:
   //==========================================
