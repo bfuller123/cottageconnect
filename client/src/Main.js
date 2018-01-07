@@ -86,28 +86,44 @@ class Main extends Component {
                     <nav className="navbar navbar-fixed-top">
                       <div className="container-fluid">
                         <div className="navbar-header">
+                        
+                           <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span> 
+                            </button>
+
                           <a className="navbar-brand" href="/">Cottage Connect</a>
                         </div>
-                        <ul className="nav navbar-nav">
-                          <li><a href="/#About" className="active">About</a></li>
-                          <li><a href="/#Search">Search</a></li>
-                          <li><Link to="/dashboard">Dashboard</Link></li>
-                          <li><Link to="/logout">Log out</Link></li>
-                        </ul>
+                        <div className="collapse navbar-collapse" id="myNavbar">
+                          <ul className="nav navbar-nav navbar-right">
+                            <li><a href="/#About" className="active">About</a></li>
+                            <li><a href="/#Search">Search</a></li>
+                            <li><Link to="/dashboard">Dashboard</Link></li>
+                            <li><Link to="/logout">Log out</Link></li>
+                          </ul>
+                        </div>  
                       </div>
                     </nav>
                     ) : (
                       <nav className="navbar navbar-fixed-top">
                         <div className="container-fluid">
                           <div className="navbar-header">
+                            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span> 
+                            </button>
                             <a className="navbar-brand" href="/">Cottage Connect</a>
                           </div>
-                          <ul className="nav navbar-nav">
-                            <li><a href="/#About" className="active">About</a></li>
-                            <li><a href="/#Search">Search</a></li>
-                            <li><Link to="/login">Log in</Link></li>
-                            <li><Link to="/signup">Sign up</Link></li>
-                          </ul>
+                          <div className="collapse navbar-collapse" id="myNavbar">
+                            <ul className="nav navbar-nav navbar-right">
+                              <li><a href="/#About" className="active">About</a></li>
+                              <li><a href="/#Search">Search</a></li>
+                              <li><Link to="/login">Log in</Link></li>
+                              <li><Link to="/signup">Sign up</Link></li>
+                            </ul>
+                          </div>
                         </div>
                       </nav>
                     )}

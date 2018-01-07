@@ -1,18 +1,14 @@
 .SearchBox {
     background-color: #eeba7e;
-	height: 300px;
+	height: 500px;
 	margin-top: 6px;
-	position: relative;
+}
+
+.col-lg-6, .col-md-8{
+	padding: 5% 5%;
 }
 
 .SearchHed{
 	text-align: center;
-	padding-bottom: 10px;
-}
-
-.SearchCenter{
-	width: 60%;
-	position: absolute;
-	top: 20%;
-	left: 20%;
+	padding: 20px 0 10px 0;
 }
