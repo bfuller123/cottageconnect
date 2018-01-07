@@ -15658,16 +15658,20 @@ var About = function About() {
 		{ className: "AboutBox", id: "About" },
 		_react2.default.createElement(
 			"div",
-			{ className: "AboutCenter" },
+			{ className: "row" },
 			_react2.default.createElement(
-				"h1",
-				{ className: "AboutHed" },
-				"About Cottage Connect"
-			),
-			_react2.default.createElement(
-				"p",
-				{ className: "AboutText" },
-				"A cottage industry is a small-scale industry often operated out of a home, rather than out of a factory. Cottage industries are defined by the amount of investment required to start, as well as the number of people employed. They often focus on the production of labor-intensive goods. These small businesses could be hiding in plain sight. Cottage Connect expands a merchant's reach, helping him or her to find new customers. And helping customers support their local economy."
+				"div",
+				{ className: "col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12" },
+				_react2.default.createElement(
+					"h1",
+					{ className: "AboutHed" },
+					"About Cottage Connect"
+				),
+				_react2.default.createElement(
+					"p",
+					{ className: "AboutText" },
+					"A cottage industry is a small-scale industry often operated out of a home, rather than out of a factory. Cottage industries are defined by the amount of investment required to start, as well as the number of people employed. They often focus on the production of labor-intensive goods. These small businesses could be hiding in plain sight. Cottage Connect expands a merchant's reach, helping him or her to find new customers. And helping customers support their local economy."
+				)
 			)
 		)
 	);
@@ -16084,6 +16088,15 @@ var MainTwo = function (_Component) {
               "h2",
               { className: "MainH2" },
               "Uniting people with homemade products"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "container-fluid text-center" },
+              _react2.default.createElement(
+                "a",
+                { href: "/#About", title: "To About" },
+                _react2.default.createElement("span", { className: "glyphicon glyphicon-circle-arrow-down" })
+              )
             )
           )
         )
@@ -16302,7 +16315,7 @@ var Searchbar = function (_React$Component) {
         { className: "SearchBox", id: "Search" },
         _react2.default.createElement(
           "div",
-          { className: "SearchCenter" },
+          { className: "col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12" },
           _react2.default.createElement(
             "h1",
             { className: "SearchHed" },
@@ -16311,16 +16324,16 @@ var Searchbar = function (_React$Component) {
           _react2.default.createElement(
             "h3",
             { className: "search seachHeader" },
-            "Food \xA0"
+            "Food \xA0",
+            _react2.default.createElement("input", { type: "text", className: "search searchInput", id: "searchFood", placeholder: "ex. cookies" })
           ),
-          _react2.default.createElement("input", { type: "text", className: "search searchInput", id: "searchFood", placeholder: "ex. cookies" }),
           _react2.default.createElement(
             "h3",
             { className: "search seachHeader" },
-            "Area\xA0"
+            "Area\xA0",
+            _react2.default.createElement("input", { type: "text", className: "search searchInput", id: "searchCity", placeholder: "ex. Dallas, TX or 75202" })
           ),
-          _react2.default.createElement("input", { type: "text", className: "search searchInput", id: "searchCity", placeholder: "ex. Dallas, TX or 75202" }),
-          _react2.default.createElement("input", { type: "submit", className: "search searchButton", id: "searchSubmit", value: "search" })
+          _react2.default.createElement("input", { type: "submit", className: "btn btn-info btn-lg search searchButton p-3", id: "searchSubmit", value: "Search" })
         )
       );
     }
@@ -19582,7 +19595,7 @@ exports = module.exports = __webpack_require__(55)(false);
 
 
 // module
-exports.push([module.i, ".AboutBox {\n    background-color: #fede8a;\n\theight: 400px;\n\tmargin-top: 6px;\n\tposition: relative;\n}\n\n.AboutHed{\n\ttext-align: center;\n\tpadding-bottom: 10px;\n}\n\n.AboutText{\n\ttext-align: center;\n\tfont-size: 18px;\n}\n\n.AboutCenter{\n\twidth: 60%; \n\tposition: absolute;\n\ttop: 20%;\n\tleft: 20%;\n}\n", ""]);
+exports.push([module.i, ".AboutBox {\n    background-color: #fede8a;\n\theight: 400px;\n\tmargin-top: 6px;\n}\n\n.AboutHed{\n\ttext-align: center;\n\tpadding: 20px 0 10px 0;\n}\n\n.AboutText{\n\ttext-align: center;\n\tfont-size: 130%;\n}\n", ""]);
 
 // exports
 
@@ -19610,7 +19623,7 @@ exports = module.exports = __webpack_require__(55)(false);
 
 
 // module
-exports.push([module.i, ".MainHeads{\n\ttext-align: center;\n \ttop: 50%;\n\tleft: 35%;\n\tposition: absolute;\n}\n\n.MainH1{\n\tfont-size: 120px;\n\tfont-family: 'Dr Sugiyama', cursive;\n}\n\n.MainH2{\n\tfont-size: 50px;\n\tfont-family: 'Dr Sugiyama', cursive;\n}\n\n", ""]);
+exports.push([module.i, ".MainHeads{\n\ttext-align: center;\n \ttop: 50%;\n\tleft: 35%;\n\tposition: absolute;\n}\n\n.MainH1{\n\tfont-size: 120px;\n\tfont-family: 'Dr Sugiyama', cursive;\n}\n\n.MainH2{\n\tfont-size: 50px;\n\tfont-family: 'Dr Sugiyama', cursive;\n}\n\n.glyphicon {\n    font-size: 50px;\n    margin-top: 50px;\n    color: #486a7d;\n}\n", ""]);
 
 // exports
 
@@ -19624,7 +19637,7 @@ exports = module.exports = __webpack_require__(55)(false);
 
 
 // module
-exports.push([module.i, ".navbar{\n  \tbackground: #486a7d;\n}\n\n.navbar a{\n  \tfont-size: 20px;\n  \tcolor: #fff;\n}\n\n.navbar-brand {\n  font-family: 'Dr Sugiyama', cursive;\n  font-size: 200% !important;\n}\n\n.navbar-nav > li > a {\n  font-size: 90% !important;\n}\n\na:hover{\n\tcolor: #000;\n}\n\n.navbar-toggle{\n\tbackground: orange;\n}", ""]);
+exports.push([module.i, ".navbar{\n  \tbackground: #486a7d;\n\tmargin-bottom: 0;\n    z-index: 9999;\n}\n\n.navbar a{\n  \tfont-size: 20px;\n  \tcolor: #fff;\n}\n\n.navbar-brand {\n  font-family: 'Dr Sugiyama', cursive;\n  font-size: 200% !important;\n}\n\n.navbar-nav > li > a {\n  font-size: 90% !important;\n}\n\na:hover{\n\tcolor: #000;\n}\n\n.navbar-toggle {\n    /*border-color: yellow;*/\n    color: #000 !important;\n\tbackground: #e7ceaf;    \n}\n", ""]);
 
 // exports
 
@@ -19638,7 +19651,7 @@ exports = module.exports = __webpack_require__(55)(false);
 
 
 // module
-exports.push([module.i, ".SearchBox {\n    background-color: #eeba7e;\n\theight: 300px;\n\tmargin-top: 6px;\n\tposition: relative;\n}\n\n.SearchHed{\n\ttext-align: center;\n\tpadding-bottom: 10px;\n}\n\n.SearchCenter{\n\twidth: 60%;\n\tposition: absolute;\n\ttop: 20%;\n\tleft: 20%;\n}\n", ""]);
+exports.push([module.i, ".SearchBox {\n    background-color: #eeba7e;\n\theight: 400px;\n\tmargin-top: 6px;\n\tposition: relative;\n}\n\n.SearchHed{\n\ttext-align: center;\n\tpadding: 20px 0 10px 0;\n}\n", ""]);
 
 // exports
 

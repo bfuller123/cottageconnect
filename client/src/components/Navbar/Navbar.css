@@ -1,5 +1,7 @@
 .navbar{
   	background: #486a7d;
+	margin-bottom: 0;
+    z-index: 9999;
 }
 
 .navbar a{
@@ -20,6 +22,8 @@ a:hover{
 	color: #000;
 }
 
-.navbar-toggle{
-	background: orange;
+.navbar-toggle {
+    /*border-color: yellow;*/
+    color: #000 !important;
+	background: #e7ceaf;    
 }
