@@ -2,6 +2,7 @@ const router = require("express").Router();
 const ccController = require("../../controllers/ccController");
 
 
+
 //==========================================
 // Cottage Routes:
 //==========================================
@@ -17,10 +18,17 @@ router.route("/customers")
 	.post(ccController.createCottage);
 
 // Matches with "/api/cottages/cottages/:id
+// for a specific merchant
 router.route("/cottages/:id")
 	.get(ccController.findCottageById)
 	.put(ccController.updateCottage)
 	.delete(ccController.removeCottage);
+
+// Route for performing a merchant search
+// Receives a JSON containing a .query
+// which contains the search criteria
+router.route("/searchmerchants")
+	.get(ccController.searchMerchants);
 
 //==========================================
 // Inventory Routes:
@@ -53,7 +61,6 @@ router.route("/categories")
   //==========================================
 
 // Matches with "/api/cottages/savedsearches/:id
-
 router.route("/savedsearches/:id")
 	.get(ccController.findSavedSearches)
 	.put(ccController.updateSavedSearches)
@@ -93,7 +100,7 @@ router.route("/merchantreviews/:id")
 
 // Matches with "/api/ccmessages
 router.route("/ccmessages")
-	.post(ccController.createMessage);
+	.post(ccController.	);
 
 // Matches with "/api/ccmessages/:id
 router.route("/ccmessages/:id")
