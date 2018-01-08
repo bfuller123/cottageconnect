@@ -23,7 +23,7 @@ a:hover{
 }
 
 .navbar-toggle {
-  /*border-color: yellow;*/
   color: #000 !important;
-	background: #e7ceaf;    
+	/*background: #b2d3e4;    */
+  border: 1px #fff solid;
 }
