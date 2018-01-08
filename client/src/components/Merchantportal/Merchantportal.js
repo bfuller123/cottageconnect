@@ -28,7 +28,7 @@ class MerchantPortal extends React.Component {
               <ul>
               {goods}
               </ul></h4>
-              <button id="addNewGood" className="btn btn-info btn-lg" onClick={this.props.addGoodBtnClick}>Add</button>&#160;&#160;
+              <button id="addNewGood" className="btn btn-info btn-lg" onClick={this.props.addGoodBtnClick}>Add</button>
               <button id="updateMerchantButton" className="btn btn-info btn-lg" onClick={this.props.submitBtnClick}>Update</button>
           </div>
         </div>

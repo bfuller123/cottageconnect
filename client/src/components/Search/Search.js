@@ -23,8 +23,8 @@ class Searchbar extends React.Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-lg-8 col-lg-offset-2 col-md-6 col-sm-12">
-                <p>Results from search goes here. question: can the search be by food or area OR does it have to be both????</p>
+              <div className="col-lg-10 col-lg-offset-1 col-md-6 col-sm-12">
+                <p>Results????</p>
                 <CardLoader />
               </div>
             </div>
