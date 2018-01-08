@@ -20,7 +20,7 @@ class MainTwo extends Component {
                 <a href="/#About" title="To About">
                 <span className="glyphicon glyphicon-circle-arrow-down"></span></a>
 
-              </div>   
+              </div>
           </div>
         </div>
       </section>
@@ -29,4 +29,3 @@ class MainTwo extends Component {
 }
 
 export default MainTwo;
-
