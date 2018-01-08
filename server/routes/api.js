@@ -10,7 +10,7 @@ router.get('/dashboard', (req, res) => {
   });
 });
 
-router.get('/updateMerchant', function(req, res){
+router.get('/updateMerchant/:id', function(req, res){
   res.status(200).json({
     message: "You are hitting the correct place"
   })
