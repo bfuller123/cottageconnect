@@ -17824,29 +17824,58 @@ var Searchbar = function (_React$Component) {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
-        "form",
-        { className: "SearchBox", id: "Search" },
+        "div",
+        null,
         _react2.default.createElement(
-          "div",
-          { className: "SearchCenter" },
+          "form",
+          { className: "SearchBox form-inline", id: "Search" },
           _react2.default.createElement(
             "h1",
             { className: "SearchHed" },
             "Quick Search of your Area"
           ),
           _react2.default.createElement(
-            "h3",
-            { className: "search seachHeader" },
-            "Food \xA0"
+            "div",
+            { className: "row" },
+            _react2.default.createElement(
+              "div",
+              { className: "col-lg-8 col-lg-offset-2 col-md-6 col-sm-12" },
+              _react2.default.createElement(
+                "div",
+                { className: "form-group" },
+                _react2.default.createElement(
+                  "h3",
+                  { className: "search seachHeader" },
+                  "Food \xA0",
+                  _react2.default.createElement("input", { type: "text", className: "search searchInput", id: "searchFood", placeholder: "ex. cookies" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "form-group" },
+                _react2.default.createElement(
+                  "h3",
+                  { className: "search seachHeader" },
+                  "\xA0\xA0Area\xA0",
+                  _react2.default.createElement("input", { type: "text", className: "search searchInput", id: "searchCity", placeholder: "ex. Dallas, TX or 75202" })
+                )
+              ),
+              _react2.default.createElement("input", { type: "submit", className: "btn btn-info btn-lg search searchButton p-3", id: "searchSubmit", value: "Search" })
+            )
           ),
-          _react2.default.createElement("input", { type: "text", className: "search searchInput", id: "searchFood", placeholder: "ex. cookies" }),
           _react2.default.createElement(
-            "h3",
-            { className: "search seachHeader" },
-            "Area\xA0"
-          ),
-          _react2.default.createElement("input", { type: "text", className: "search searchInput", id: "searchCity", placeholder: "ex. Dallas, TX or 75202" }),
-          _react2.default.createElement("input", { type: "submit", className: "search searchButton", id: "searchSubmit", value: "search", onClick: this.props.searchBtnHandleClick })
+            "div",
+            { className: "row" },
+            _react2.default.createElement(
+              "div",
+              { className: "col-lg-8 col-lg-offset-2 col-md-6 col-sm-12" },
+              _react2.default.createElement(
+                "p",
+                null,
+                "Results from search goes here. question: can the search be by food or area OR does it have to be both????"
+              )
+            )
+          )
         )
       );
     }
@@ -21255,7 +21284,7 @@ exports = module.exports = __webpack_require__(56)(false);
 
 
 // module
-exports.push([module.i, ".SearchBox {\n    background-color: #eeba7e;\n\theight: 300px;\n\tmargin-top: 6px;\n\tposition: relative;\n}\n\n.SearchHed{\n\ttext-align: center;\n\tpadding-bottom: 10px;\n}\n\n.SearchCenter{\n\twidth: 60%;\n\tposition: absolute;\n\ttop: 20%;\n\tleft: 20%;\n}\n", ""]);
+exports.push([module.i, ".SearchBox {\n    background-color: #eeba7e;\n\theight: 500px;\n\tmargin-top: 6px;\n}\n\n.SearchHed{\n\ttext-align: center;\n\tpadding: 50px 0 10px 0;\n}\n", ""]);
 
 // exports
 
