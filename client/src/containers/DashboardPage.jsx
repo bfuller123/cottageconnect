@@ -45,7 +45,7 @@ class DashboardPage extends React.Component {
 
   updateMerchant(){
     const xhr = new XMLHttpRequest();
-    xhr.open('get', '/api/updateMerchant?id=Brett');
+    xhr.open('get', '/api/updateMerchant/Brett');
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     // set the authorization HTTP header
     xhr.setRequestHeader('Authorization', `bearer ${Auth.getToken()}`);
@@ -62,7 +62,7 @@ class DashboardPage extends React.Component {
    * Render the component.
    */
   render() {
-    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} /><button onClick={this.updateMerchant}>Click Me </button></div>);
+    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} btnClickHandler={this.updateMerchant} /></div>);
   }
 
 }
