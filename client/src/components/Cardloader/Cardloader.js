@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './card';
+import Card from '../Card';
 import "./Cardloader.css";
 
 //this will later become data from the backend
@@ -18,18 +18,23 @@ let shops = [
     name: "Conrad Coffees",
     image: "https://img.leafcdn.tv/640/clsd/getty/6e53d38291414c82bea2d44cdcbf69f1",
     address:"404 Java Way Richardson, TX"
-  },
+ /* },
   {
     name: "David's Doughs",
     image:"https://images-na.ssl-images-amazon.com/images/I/51mpGRim00L._SX355_.jpg",
-    address:"350 Yeast Ct Addison, TX"
+    address:"350 Yeast Ct Addison, TX"*/
   }
 ];
 
 class Cardloader extends React.Component {
-  state = {
-    itemsForCards: shops
-  }
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      itemsForCards: shops
+    };
+  };
 
   render() {
     //taking a list and mapping into a new list that contains every list item
@@ -39,9 +44,15 @@ class Cardloader extends React.Component {
 
     //since React can render based on Arrays, we throw in the list of list items to be rendered
     return(
+
+ <div className="flex-container">     
+
       <div className="cards">
         {list}
       </div>
+
+</div>
+
     );
   }
 }

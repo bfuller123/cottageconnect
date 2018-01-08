@@ -34,3 +34,12 @@ input[type=text]:focus {
     /*border: none;*/
     outline: none;
 }
+
+#addNewGood{
+    margin-right: 20px;
+}
+
+#addNewCategory{
+    margin-bottom: 20px;
+
+}
