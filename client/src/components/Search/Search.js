@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Search.css";
+import CardLoader from "../Cardloader"
 
 class Searchbar extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class Searchbar extends React.Component {
             <div className="row">
               <div className="col-lg-8 col-lg-offset-2 col-md-6 col-sm-12">
                 <p>Results from search goes here. question: can the search be by food or area OR does it have to be both????</p>
+                <CardLoader />
               </div>
             </div>
         </form>
