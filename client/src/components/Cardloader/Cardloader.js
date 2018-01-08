@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './card';
+import Card from '../Card';
 import "./Cardloader.css";
 
 //this will later become data from the backend
@@ -27,9 +27,14 @@ let shops = [
 ];
 
 class Cardloader extends React.Component {
-  state = {
-    itemsForCards: shops
-  }
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      itemsForCards: shops
+    };
+  };
 
   render() {
     //taking a list and mapping into a new list that contains every list item
