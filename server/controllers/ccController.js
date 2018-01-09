@@ -59,6 +59,14 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findMerchantByZip: function(req, res){
+    let zip = req.params.zipCode ? req.params.zipCode : '.';
+    let zipToSearch = new RegExp(zip);
+    db.Cottage
+      .find({zipCode: zipToSearch})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
 
 //==========================================
 // Generic Merchant Search:
