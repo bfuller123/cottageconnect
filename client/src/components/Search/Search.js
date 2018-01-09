@@ -9,10 +9,7 @@ class Searchbar extends React.Component {
     super();
 
     this.state = {
-      searchResults: [{
-          businessName: "Brett's Burgers",
-          streetAddress1:"123 fake st Dallas, TX 75214"
-        }]
+      searchResults: []
     }
   };
 
