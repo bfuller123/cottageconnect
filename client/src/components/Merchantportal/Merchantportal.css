@@ -7,7 +7,7 @@
 	padding: 20px 0;
 	margin-bottom: 10px;
 	font-family: 'Dr Sugiyama', cursive;
-	font-size: 400%;	
+	font-size: 400%;
 }
 
 .MType{
@@ -16,7 +16,7 @@
 }
 
 ul{
-	list-style-type: none; 
+	list-style-type: none;
 }
 
 input[type=text] {
@@ -26,11 +26,24 @@ input[type=text] {
     border: none;
     border-bottom: 1px solid #555;
     /*background-color: #b6d6e6;*/
-    background-color: #b2d3e4;
+    /* background-color: #b2d3e4; */
+    background-color: transparent;
 }
 
 input[type=text]:focus {
     background-color: #fff;
     /*border: none;*/
     outline: none;
+}
+
+#addNewGood{
+    margin-right: 20px;
+}
+
+#addNewCategory{
+    margin-bottom: 20px;
+}
+
+#UserAddress, #UserEmail{
+  width: 70%;
 }

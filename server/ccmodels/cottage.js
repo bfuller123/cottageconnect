@@ -1,4 +1,4 @@
-// Make use of the Mongoose ORM
+    // Make use of the Mongoose ORM
 const mongoose = require("mongoose");
 
 // Save a reference to the Schema constructor
@@ -20,11 +20,11 @@ const CottageSchema = new Schema({
     zipCode: {type: String, required: false},
     county: {type: String, required: false},
     longitude: {type: Number, required: false},
-    latitude: {type: Number, required: false, default: 0},
-    phoneNumber:{type: String, required: false, default: 0},
+    latitude: {type: Number, required: false},
+    phoneNumber:{type: String, required: false},
     firstName:{type: String, required: false}, 
     middleName:{type: String, required: false}, 
-    lastName:{type: String, required: false},
+    lastName:{type: String, required: false}
 });
 
 // This creates our model from the above schema, using mongoose's model method

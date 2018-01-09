@@ -93,7 +93,7 @@ class Main extends Component {
                             <span className="icon-bar"></span> 
                           </button>
 
-                          <a className="navbar-brand" href="/">Cottage Connect</a>
+                          <a className="navbar-brand" id="brand" href="/">Cottage Connect</a>
                         </div>
                         <div className="collapse navbar-collapse" id="myNavbar">
                           <ul className="nav navbar-nav navbar-right">
@@ -104,7 +104,7 @@ class Main extends Component {
                           </ul>
                         </div>
                       </div>
-                    </nav>
+                    </nav>                   
                     ) : (
                       <nav className="navbar navbar-fixed-top">
                         <div className="container-fluid">
@@ -118,7 +118,7 @@ class Main extends Component {
                             <li><Link to="/signup">Sign up</Link></li>
                           </ul>
                         </div>
-                      </nav>
+                      </nav>                   
                     )}
 
             <PropsRoute exact path="/" component={Landing} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
