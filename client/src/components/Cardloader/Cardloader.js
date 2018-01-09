@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../Card';
 import "./Cardloader.css";
+import baseImage from './../../images/CChouse.png';
 
 //this will later become data from the backend
 // let shops = [
@@ -31,7 +32,7 @@ class Cardloader extends React.Component {
   render() {
     //taking a list and mapping into a new list that contains every list item
     const list = this.props.results.map((item) => (
-      <Card name={item.businessName} address={item.streetAddress1}/>
+      <Card name={item.businessName ? item.businessName : "Local Cottage"} address={item.streetAddress1} image={item.image ? item.image : baseImage}/>
     ));
 
     //since React can render based on Arrays, we throw in the list of list items to be rendered
