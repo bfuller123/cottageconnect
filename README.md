@@ -28,6 +28,10 @@ So you focus on making the best items you can, and let us handle bringing your c
   * Nodemailer
   * Passport
   * React-Router
+  * axios
+  * bcryptjs
+  * jsonwebtoken
+  * validator
 
 ## Walkthrough 
 
