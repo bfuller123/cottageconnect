@@ -1,22 +1,27 @@
 const router = require("express").Router();
 const ccController = require("../controllers/ccController");
 
+// Require and use the bodyParser and express to correctly intepret the JSONs
+const bodyParser = require("body-parser");
+const express = require('express');
+const app = express();	
+app.use(bodyParser.json());
 
 //==========================================
 // Cottage Routes:
 //==========================================
 
-// Matches with "/api/cottages/merchants"
+// Matches with "/cc/merchants"
 router.route("/merchants")
 	.get(ccController.findAllMerchants)
 	.post(ccController.createCottage);
 
-// Matches with "/api/cottages/customers
+// Matches with "/cc/customers
 router.route("/customers")
 	.get(ccController.findAllCustomers)
 	.post(ccController.createCottage);
 
-// Matches with "/api/cottages/cottages/:id
+// Matches with "/cc/cottages/:id
 router.route("/cottages/:id")
 	.get(ccController.findCottageById)
 	.put(ccController.updateCottage)
@@ -26,7 +31,7 @@ router.route("/cottages/:id")
 // Inventory Routes:
 //==========================================
 
-// Matches with "/api/cottages/inventories/:id
+// Matches with "/cc/inventories/:id
 router.route("/inventories/:id")
 	.get(ccController.findMerchantInventory)
 	.put(ccController.updateInventory)
@@ -39,7 +44,7 @@ router.route("/inventories")
 // Category Routes:
 //==========================================
 
-// Matches with "/api/cottages/categories/:id
+// Matches with "/cc/categories/:id
 router.route("/categories/:id")
 	.put(ccController.updateCategory)
 	.delete(ccController.removeCategory);
@@ -52,7 +57,7 @@ router.route("/categories")
   // Saved Searches Routes:
   //==========================================
 
-// Matches with "/api/cottages/savedsearches/:id
+// Matches with "/cc/savedsearches/:id
 
 router.route("/savedsearches/:id")
 	.get(ccController.findSavedSearches)
@@ -66,7 +71,7 @@ router.route("/savedsearches")
   // Saved Merchants Routes:
   //==========================================
 
-// Matches with "/api/cottages/savedmerchants/:id
+// Matches with "/cc/savedmerchants/:id
 router.route("/savedmerchants/:id")
 	.get(ccController.findSavedMerchants)
 	.put(ccController.updateSavedMerchants)
@@ -79,15 +84,15 @@ router.route("/savedmerchants")
   // Message Routes:
   //==========================================
 
-// Matches with "/api/cottages/emailsto/:id
+// Matches with "/cc/emailsto/:id
 router.route("/emailsto/:id")
 	.get(ccController.findMessagesTo);
 
-// Matches with "/api/cottages/emailsto/:id
+// Matches with "/cc/emailsto/:id
 router.route("/emailsfrom/:id")
 	.get(ccController.findMessagesFrom);
 
-// Matches with "/api/cottages/emailsto/:id
+// Matches with "/cc/emailsto/:id
 router.route("/merchantreviews/:id")
 	.get(ccController.findMerchantReviews);
 
