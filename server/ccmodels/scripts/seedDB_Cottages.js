@@ -91,7 +91,7 @@ const cottageSeed = [
     },
 
     {
-        userName: "Sleepy",
+        userName: "Sneezy",
         isMerchant: false,
         isActiveCustomer: true,
         email: "cottagetest5@cottageconnect.com",
@@ -413,7 +413,7 @@ const cottageSeed = [
         dateAdded: new Date(Date.now())
     },
     {
-        userName: "Tammy",
+        userName: "Tammi",
         isMerchant: true,
         isActiveCustomer: false,
         businessName: "TamTam Buns",
@@ -1215,7 +1215,7 @@ const cottageSeed = [
         isActiveCustomer: false,
         businessName: "Nuts for Butter",
         website: "",
-        email: "NeedAnEmail@noidont.com",
+        email: "NeedAnemail@noidont.com",
         streetAddress1:"3105 Forest Ln",
         streetAddress2: "",
         city: "Dallas",
