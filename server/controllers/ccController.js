@@ -60,8 +60,10 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findMerchantByZip: function(req, res){
-    let zip = req.params.zipCode ? req.params.zipCode : '.';
-    let zipToSearch = new RegExp(zip);
+    let zip = req.params.zipCode;
+    console.log(zip);
+    let zipToSearch = new RegExp(zip.length > 0 ? zip : '.');
+    console.log(zipToSearch);
     db.Cottage
       .find({zipCode: zipToSearch})
       .then(dbModel => res.json(dbModel))

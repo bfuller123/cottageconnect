@@ -20,11 +20,19 @@ class Searchbar extends React.Component {
     let newData = [];
     let zipCode = this.state.searchCity;
     let food = this.state.searchFood;
-    console.log(zipCode);
+    let searchURL = '/cc/merchants';
+
+    if(zipCode.length > 0 && food.length > 0){
+      searchURL = `/cc/merchants/search/${zipCode}/${food}`;
+    }
+    else if(zipCode.length > 0 && food.length == 0){
+      searchURL = `/cc/merchants/search/${zipCode}`;
+    }
+
     //if you want to switch to a post method, put through params:{key:value, key2:value2}
     axios({
       method: 'get',
-      url: `/cc/merchants/${zipCode}/${food}`
+      url: searchURL
     })
     //have to use arrow function here and on line 52 since es6 arrow functions since they always use this of the enclosing scope and therefore can place this to SearchBar!!
     .then((response) => {
