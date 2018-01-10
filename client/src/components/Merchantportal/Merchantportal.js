@@ -23,13 +23,18 @@ class MerchantPortal extends React.Component {
               <ul>
                 {categories}
               </ul></h4>
-              <button id="addNewCategory" className="btn btn-info btn-lg" onClick={this.props.addCategoryBtnClick}>Add</button>
+              <button id="addNewCategory" className="button" onClick={this.props.addCategoryBtnClick}>Add Types</button>
             <h4 className="MType">Products for Sale:
               <ul>
               {goods}
               </ul></h4>
-              <button id="addNewGood" className="btn btn-info btn-lg" onClick={this.props.addGoodBtnClick}>Add</button>
-              <button id="updateMerchantButton" className="btn btn-info btn-lg" onClick={this.props.submitBtnClick}>Update</button>
+              <button id="addNewGood" className="button" onClick={this.props.addGoodBtnClick}>Add Products</button>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12">
+              <button id="updateMerchantButton" onClick={this.props.submitBtnClick}>Update Cottage</button>
           </div>
         </div>
       </div>

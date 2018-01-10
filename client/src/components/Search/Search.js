@@ -98,7 +98,7 @@ class Searchbar extends React.Component {
             <div className="row">
               <div className="col-lg-1 col-lg-offset-1">
 
-                <input type="submit" className="btn btn-info btn-lg search searchButton p-3" id="searchSubmit" value="Search" onClick={(e) => this.sendInfo(e)} />
+                <input type="submit" className="button search searchButton p-3" id="searchSubmit" value="Search" onClick={(e) => this.sendInfo(e)} />
               </div>
             </div> 
 
