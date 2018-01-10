@@ -16,9 +16,14 @@ router.route("/merchants")
 	.get(ccController.findAllMerchants)
 	.post(ccController.createCottage);
 
-// Matches with "/cc/merchants/:zipCode"
-router.route("/merchants/:zipCode?/:food?")
+router.route("/merchants/zip/:zipCode")
   .get(ccController.findMerchantByZip);
+
+router.route("/merchants/category/:food")
+  .get(ccController.findMerchantByFood);
+
+router.route("/merchants/search/:zipCode/:food")
+  .get(ccController.findMerchantByZipAndFood);
 
 // Matches with "/cc/customers
 router.route("/customers")
