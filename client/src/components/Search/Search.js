@@ -11,7 +11,8 @@ class Searchbar extends React.Component {
     this.state = {
       searchResults: [],
       searchCity: '',
-      searchFood: ''
+      searchFood: '',
+      searchRadius: '5'
     }
   };
 
@@ -54,6 +55,10 @@ class Searchbar extends React.Component {
     this.setState({searchFood: e.target.value});
   };
 
+  radiusChangeHandler(e){
+    this.setState({searchRadius: e.target.value});
+  };
+
   render() {
     return(
       <div>
@@ -69,6 +74,17 @@ class Searchbar extends React.Component {
                 <div className="form-group">
                   <h3 className="search seachHeader">&#160;&#160;Area&#160;
                   <input type="text" className="search searchInput" id="searchCity" placeholder="ex. Dallas, TX or 75202" onChange={(e) => this.zipCodeChangeHandler(e)} /></h3>
+                </div>
+                <div className="form-group">
+                  <h3 className="search seachHeader">&#160;&#160;Radius&#160;
+                    <select className="search searchInput" id="searchRadius" onChange={(e) => this.radiusChangeHandler(e)}>
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                      <option value="25">25</option>
+                    </select>
+                  </h3>
                 </div>
                 <input type="submit" className="btn btn-info btn-lg search searchButton p-3" id="searchSubmit" value="Search" onClick={(e) => this.sendInfo(e)} />
               </div>
