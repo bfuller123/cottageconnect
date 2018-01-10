@@ -1,6 +1,6 @@
 .SearchBox {
     background-color: #eeba7e;
-	height: 500px;
+	height: 700px;
 	margin-top: 6px;
 }
 
@@ -9,10 +9,23 @@
 	padding: 50px 0 10px 0;
 }
 
-.searchInput{
-    background-color: #fff !important;
-}
-
 #searchSubmit{
 	margin-left: 20px;
+}
+
+input[type=text] {
+    padding: 6px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #555;
+    background-color: transparent;
+}
+
+option {
+    background-color: transparent;
+}
+
+.ResultsHed{
+	text-align: center;
 }
