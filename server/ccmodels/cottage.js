@@ -11,7 +11,10 @@ const CottageSchema = new Schema({
     isMerchant: {type: Boolean, default: false},
     isActiveCustomer: {type: Boolean, default: false},
     businessName: {type: String, required: false},
-    primaryCategoryId: {type: Schema.Types.ObjectId, ref: "Category", required: false},
+    category: {type: String, required: false},
+
+    inventory: [{type: String}],
+
     website: {type: String, required: false},
     streetAddress1: {type: String, required: false},
     streetAddress2: {type: String, required: false},
