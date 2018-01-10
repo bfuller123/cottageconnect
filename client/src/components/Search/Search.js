@@ -9,17 +9,22 @@ class Searchbar extends React.Component {
     super();
 
     this.state = {
-      searchResults: []
+      searchResults: [],
+      searchCity: '',
+      searchFood: ''
     }
   };
 
   sendInfo(e){
     e.preventDefault();
     let newData = [];
+    let zipCode = this.state.searchCity;
+    let food = this.state.searchFood;
+    console.log(zipCode);
     //if you want to switch to a post method, put through params:{key:value, key2:value2}
     axios({
       method: 'get',
-      url: '/cc/merchants'
+      url: `/cc/merchants/${zipCode}/${food}`
     })
     //have to use arrow function here and on line 52 since es6 arrow functions since they always use this of the enclosing scope and therefore can place this to SearchBar!!
     .then((response) => {
@@ -28,6 +33,14 @@ class Searchbar extends React.Component {
       console.log(newData);
       this.setState({searchResults: newData});
     })
+  };
+
+  zipCodeChangeHandler(e){
+    this.setState({searchCity: e.target.value});
+  };
+
+  foodChangeHandler(e){
+    this.setState({searchFood: e.target.value});
   };
 
   render() {
@@ -40,11 +53,11 @@ class Searchbar extends React.Component {
               <div className="col-lg-8 col-lg-offset-2 col-md-6 col-sm-12">
                 <div className="form-group">
                   <h3 className="search seachHeader">Food &#160;
-                  <input type="text" className="search searchInput" id="searchFood" placeholder="ex. cookies" /></h3>
+                  <input type="text" className="search searchInput" id="searchFood" placeholder="ex. cookies" onChange={(e) => this.foodChangeHandler(e)} /></h3>
                 </div>
                 <div className="form-group">
                   <h3 className="search seachHeader">&#160;&#160;Area&#160;
-                  <input type="text" className="search searchInput" id="searchCity" placeholder="ex. Dallas, TX or 75202" /></h3>
+                  <input type="text" className="search searchInput" id="searchCity" placeholder="ex. Dallas, TX or 75202" onChange={(e) => this.zipCodeChangeHandler(e)} /></h3>
                 </div>
                 <input type="submit" className="btn btn-info btn-lg search searchButton p-3" id="searchSubmit" value="Search" onClick={(e) => this.sendInfo(e)} />
               </div>
