@@ -4,7 +4,7 @@ const ccController = require("../controllers/ccController");
 // Require and use the bodyParser and express to correctly intepret the JSONs
 const bodyParser = require("body-parser");
 const express = require('express');
-const app = express();	
+const app = express();
 app.use(bodyParser.json());
 
 //==========================================
@@ -15,6 +15,15 @@ app.use(bodyParser.json());
 router.route("/merchants")
 	.get(ccController.findAllMerchants)
 	.post(ccController.createCottage);
+
+router.route("/merchants/zip/:zipCode")
+  .get(ccController.findMerchantByZip);
+
+router.route("/merchants/category/:food")
+  .get(ccController.findMerchantByFood);
+
+router.route("/merchants/search/:zipCode/:food")
+  .get(ccController.findMerchantByZipAndFood);
 
 // Matches with "/cc/customers
 router.route("/customers")

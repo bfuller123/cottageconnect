@@ -60,6 +60,35 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
+  findMerchantByZipAndFood: function(req, res){
+    let zip = req.params.zipCode;
+    let zipToSearch = new RegExp(zip, 'i');
+    let food = req.params.food;
+    let foodToSearch = new RegExp(food, 'i');
+    db.Cottage
+      .find({zipCode: zipToSearch, businessName: foodToSearch})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  findMerchantByZip: function(req, res){
+    let zip = req.params.zipCode;
+    let zipToSearch = new RegExp(zip);
+    db.Cottage
+      .find({zipCode: zipToSearch})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  findMerchantByFood: function(req, res){
+    let food = req.params.food;
+    let foodToSearch = new RegExp(food, 'i');
+    db.Cottage
+      .find({businessName: foodToSearch})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
 //==========================================
 // Generic Merchant Search:
 // Receives a .query in the req for the criteria
@@ -69,7 +98,7 @@ module.exports = {
     db.Cottage
       .find(req.query)
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err)); 
+      .catch(err => res.status(422).json(err));
   },
 
 
