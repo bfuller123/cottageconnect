@@ -31,13 +31,15 @@ const cottageSeed = [
         firstName:"John", 
         middleName:"Jonah", 
         lastName:"Jameson",
+        category: "Breads, rolls, biscuits",
+        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
         dateAdded: new Date(Date.now())
     },
     {
         userName: "Bashful",
         isMerchant: true,
         isActiveCustomer: false,
-        businessName: "Peter Porker, The Incredible Spider-Ham",
+        businessName: "Peter Porker, The Inedible Spider-Ham",
         website: "http://www.microsoft.com",
         email: "cottagetest2@cottageconnect.com",
         streetAddress1:"2727 Reagan Ave",
@@ -51,6 +53,9 @@ const cottageSeed = [
         phoneNumber:"214-412-1234",
         firstName:"Peter", 
         lastName:"Parker",
+        category: "Breads, rolls, biscuits",
+        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
+
         dateAdded: new Date(Date.now())
     },
     {
@@ -70,6 +75,8 @@ const cottageSeed = [
         phoneNumber:"214-442-2334",
         firstName:"Rhonda", 
         lastName:"Fonda",
+        category: "Breads, rolls, biscuits",
+        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
         dateAdded: new Date(Date.now())
     },
     {
@@ -89,6 +96,8 @@ const cottageSeed = [
         phoneNumber:"972-432-6742",
         firstName:"Bob", 
         lastName:"Gambini",
+        category: "Breads, rolls, biscuits",
+        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
         dateAdded: new Date(Date.now())
     },
 
@@ -122,6 +131,8 @@ const cottageSeed = [
         phoneNumber:"214-528-4512",
         firstName:"Alejandro", 
         lastName:"Ojeda",
+        category: "Breads, rolls, biscuits",
+        inventory: '[\"Jams and Jellies\",\"Dried Fruits\",\"Marshmallow Pizza Sauce\"]',
         dateAdded: new Date(Date.now())
     },
     {
@@ -143,6 +154,8 @@ const cottageSeed = [
         firstName:"Albert",
         middleName:"Munich",
         lastName:"Munich",
+        category: "Breads, rolls, biscuits",
+        inventory: '[\"Jams and Jellies\",\"Dried Fruits\",\"Marshmallow Pizza Sauce\"]',
         dateAdded: new Date(Date.now())
       },
       {
