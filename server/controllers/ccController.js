@@ -59,13 +59,32 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
+  findMerchantByZipAndFood: function(req, res){
+    let zip = req.params.zipCode;
+    let zipToSearch = new RegExp(zip, 'i');
+    let food = req.params.food;
+    let foodToSearch = new RegExp(food, 'i');
+    db.Cottage
+      .find({zipCode: zipToSearch, businessName: foodToSearch})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
   findMerchantByZip: function(req, res){
     let zip = req.params.zipCode;
-    console.log(zip);
-    let zipToSearch = new RegExp(zip.length > 0 ? zip : '.');
-    console.log(zipToSearch);
+    let zipToSearch = new RegExp(zip);
     db.Cottage
       .find({zipCode: zipToSearch})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  findMerchantByFood: function(req, res){
+    let food = req.params.food;
+    let foodToSearch = new RegExp(food, 'i');
+    db.Cottage
+      .find({businessName: foodToSearch})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

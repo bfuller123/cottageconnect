@@ -26,7 +26,10 @@ class Searchbar extends React.Component {
       searchURL = `/cc/merchants/search/${zipCode}/${food}`;
     }
     else if(zipCode.length > 0 && food.length == 0){
-      searchURL = `/cc/merchants/search/${zipCode}`;
+      searchURL = `/cc/merchants/zip/${zipCode}`;
+    }
+    else if(food.length > 0 && zipCode.length == 0){
+      searchURL = `/cc/merchants/category/${food}`;
     }
 
     //if you want to switch to a post method, put through params:{key:value, key2:value2}
