@@ -1,0 +1,21 @@
+.invisible {
+  display: none;
+}
+
+#emailBody {
+  height: 25vh;
+  width: 50%;
+}
+
+#emailForm {
+  margin-left: 33%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#emailForm>h2{
+  margin-left: 10%;
+}
+
+#emailSubject {
+  width: 32.8%;
+}
