@@ -13,8 +13,29 @@ mongoose.createConnection(
   }
 );
 
+
+
 // Defining methods for the ccController
 module.exports = {
+
+  //==========================================
+  // Search for a merchant by SearchBox:
+  //==========================================
+
+  findMerchantBySearchBox: function(req, res){
+    let minLat = req.params.minlat;
+    let maxLat = req.params.maxlat;
+    let minLng = req.params.minlng;
+    let maxLng = req.params.maxlng;
+    
+    db.Cottage
+      .find({isMerchant: true, 
+            latitude: {$gt: minLat, $lt: maxLat},
+            longitude:{$gt: minLng, $lt: maxLat}
+      })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
 
   //==========================================
   // Cottage Routes:

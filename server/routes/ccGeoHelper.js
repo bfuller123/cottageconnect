@@ -1,6 +1,5 @@
 const axios = require("axios");
 
-
 // Defining methods for the ccGeoHelper
 module.exports = {
 

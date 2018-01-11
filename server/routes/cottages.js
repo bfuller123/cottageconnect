@@ -8,6 +8,12 @@ const app = express();
 app.use(bodyParser.json());
 
 //==========================================
+// Search for a merchant by SearchBox:
+//==========================================
+router.route("/merchants/search/:minlat/:maxlat/:minlng/:maxlng")
+  .get(ccController.findMerchantBySearchBox);
+
+//==========================================
 // Cottage Routes:
 //==========================================
 
@@ -36,6 +42,12 @@ router.route("/cottages/:id")
 	.put(ccController.updateCottage)
 	.delete(ccController.removeCottage);
 
+
+// Matches with "/cc/cottages/:id
+router.route("/cottages/:id")
+	.get(ccController.findCottageById)
+	.put(ccController.updateCottage)
+	.delete(ccController.removeCottage);
 //==========================================
 // Category Routes:
 //==========================================
