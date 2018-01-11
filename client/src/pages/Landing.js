@@ -15,6 +15,14 @@ class Landing extends React.Component {
     }
   }
 
+  clearEmailForm(){
+    document.getElementById('emailFrom').value = '';
+    document.getElementById('emailSubject').value = '';
+    document.getElementById('emailBody').value = '';
+    this.setState({cottageToEmailId: ''});
+    this.setState({cottageToEmailName: ''});
+  }
+
   selectCottage(e) {
     e.preventDefault();
     let cottageChosen = e.target.dataset.id;
@@ -30,6 +38,8 @@ class Landing extends React.Component {
     console.log("Email Sent to " + this.state.cottageToEmailId);
     document.getElementById('emailForm').classList.add("invisible");
     document.getElementById('Search').scrollIntoView(true);
+    // set route to send through the email
+    this.clearEmailForm();
   }
 
   render() {
