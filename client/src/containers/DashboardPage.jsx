@@ -16,7 +16,13 @@ class DashboardPage extends React.Component {
     this.state = {
       secretData: '',
       user: {},
-      address: '123 Fake St Dallas TX 75214',
+      address: {
+        streetAddress1: '5414 Alton Ave',
+        streetAddress2: '',
+        city: 'Dallas',
+        state: 'TX',
+        zipCode: '75214'
+      },
       categories: ['Coffee', 'Tea', 'Donuts'],
       goods: ['Whole Bean Coffee', 'Loose Leaf Tea', 'Chocolate Donut', 'Cake Donut']
     };
@@ -41,7 +47,7 @@ class DashboardPage extends React.Component {
       }
     });
     xhr.send();
-  }
+  };
 
   updateMerchant(){
     const xhr = new XMLHttpRequest();
@@ -56,13 +62,36 @@ class DashboardPage extends React.Component {
       }
     });
     xhr.send();
+  };
+
+  addClicked(e) {
+    let itemClicked = e.target.id;
+    let currentState = this.state[itemClicked];
+    currentState.push("");
+    this.setState({itemClicked: currentState});
+  };
+
+  removeClicked(e) {
+    let itemClicked = e.target.dataset.attribute;
+    let itemGroup = e.target.dataset.group;
+    let currentState = this.state[itemGroup];
+    currentState.splice(itemClicked, 1);
+    this.setState({itemGroup: currentState});
   }
+
+  itemChange(e) {
+    let itemToChange = e.target.dataset.attribute;
+    let itemGroup = e.target.dataset.group;
+    let currentState = this.state[itemGroup];
+    currentState[itemToChange] = e.target.value;
+    this.setState({itemGroup: currentState});
+  };
 
   /**
    * Render the component.
    */
   render() {
-    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} btnClickHandler={this.updateMerchant} /></div>);
+    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} btnClickHandler={this.updateMerchant} addClick={(e) => {this.addClicked(e)}} removeClick={(e) => {this.removeClicked(e)}} itemChanged={(e) => {this.itemChange(e)}} /></div>);
   }
 
 }

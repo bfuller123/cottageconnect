@@ -37,19 +37,6 @@ router.route("/cottages/:id")
 	.delete(ccController.removeCottage);
 
 //==========================================
-// Inventory Routes:
-//==========================================
-
-// Matches with "/cc/inventories/:id
-router.route("/inventories/:id")
-	.get(ccController.findMerchantInventory)
-	.put(ccController.updateInventory)
-	.delete(ccController.removeInventory);
-
-router.route("/inventories")
-	.post(ccController.createInventory);
-
-//==========================================
 // Category Routes:
 //==========================================
 
