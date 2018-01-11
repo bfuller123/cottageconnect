@@ -71,20 +71,27 @@ class DashboardPage extends React.Component {
     this.setState({itemClicked: currentState});
   };
 
+  removeClicked(e) {
+    let itemClicked = e.target.dataset.attribute;
+    let itemGroup = e.target.dataset.group;
+    let currentState = this.state[itemGroup];
+    currentState.splice(itemClicked, 1);
+    this.setState({itemGroup: currentState});
+  }
+
   itemChange(e) {
     let itemToChange = e.target.dataset.attribute;
     let itemGroup = e.target.dataset.group;
     let currentState = this.state[itemGroup];
     currentState[itemToChange] = e.target.value;
     this.setState({itemGroup: currentState});
-    console.log(this.state[itemGroup]);
   };
 
   /**
    * Render the component.
    */
   render() {
-    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} btnClickHandler={this.updateMerchant} addClick={(e) => {this.addClicked(e)}} itemChanged={(e) => {this.itemChange(e)}} /></div>);
+    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} btnClickHandler={this.updateMerchant} addClick={(e) => {this.addClicked(e)}} removeClick={(e) => {this.removeClicked(e)}} itemChanged={(e) => {this.itemChange(e)}} /></div>);
   }
 
 }

@@ -17,6 +17,15 @@ ul{
 	list-style-type: none;
 }
 
+i {
+  color: #c0392b;
+}
+
+i:hover {
+  color:inherit;
+  cursor: pointer;
+}
+
 input[type=text] {
     padding: 6px 10px;
     margin: 8px 0;

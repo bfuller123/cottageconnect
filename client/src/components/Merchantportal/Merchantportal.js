@@ -5,11 +5,11 @@ class MerchantPortal extends React.Component {
 
   render() {
     let categories = this.props.categories.map((item, index) => (
-      <li><input data-group="categories" data-attribute={index} onChange={this.props.inputChangeHandler} type="text" value={item} /></li>
+      <li><input data-group="categories" data-attribute={index} onChange={this.props.inputChangeHandler} type="text" value={item} /><i className="fa fa-trash-o" aria-hidden="true" data-group="categories" data-attribute={index} onClick={this.props.removeClickHandler}></i></li>
     ));
 
     let goods = this.props.goods.map((item, index) => (
-      <li><input data-attribute={index} data-group="goods" onChange={this.props.inputChangeHandler} type="text" value={item} /></li>
+      <li><input data-attribute={index} data-group="goods" onChange={this.props.inputChangeHandler} type="text" value={item} /><i className="fa fa-trash-o" aria-hidden="true" data-group="goods" data-attribute={index} onClick={this.props.removeClickHandler}></i></li>
     ));
 
     return(
