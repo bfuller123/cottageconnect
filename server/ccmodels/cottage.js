@@ -12,9 +12,7 @@ const CottageSchema = new Schema({
     isActiveCustomer: {type: Boolean, default: false},
     businessName: {type: String, required: false},
     category: {type: String, required: false},
-
     inventory: [{type: String}],
-
     website: {type: String, required: false},
     streetAddress1: {type: String, required: false},
     streetAddress2: {type: String, required: false},
