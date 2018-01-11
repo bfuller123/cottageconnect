@@ -1,6 +1,6 @@
 .SearchBox {
     background-color: #eeba7e;
-	height: 700px;
+	height: 530px;
 	margin-top: 6px;
 }
 
@@ -28,4 +28,15 @@ option {
 
 .ResultsHed{
 	text-align: center;
+    margin-top: 25px;
+}
+
+.alignBottom{
+    vertical-align: 30px;
+    display: inline-block;
+}
+
+.searchHeader{
+    vertical-align: -30px;
+    display: inline-block;
 }

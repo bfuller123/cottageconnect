@@ -4,7 +4,7 @@ import './EmailForm.css';
 const EmailForm = (props) => {
   return (
     <div className="invisible" id="emailForm">
-      <h2>Contact The Cottage</h2>
+      <h2>Contact the Cottage</h2>
       <form>
         <h4>To: {props.to}</h4>
         <h4>From: <input type="text" id="emailFrom" placeholder="Your Email"/></h4>
