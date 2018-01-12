@@ -63,7 +63,7 @@ module.exports = {
   },
   findCottageById: function(req, res) {
     db.Cottage
-      .findById(req.params.id)
+      .find({email: req.query.id})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -75,7 +75,7 @@ module.exports = {
   },
   removeCottage: function(req, res) {
     db.Cottage
-      .findById({ _id: req.params.id })
+      .findById({ email: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

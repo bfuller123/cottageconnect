@@ -18,14 +18,14 @@ class DashboardPage extends React.Component {
       secretData: '',
       user: {},
       address: {
-        streetAddress1: '5414 Alton Ave',
+        streetAddress1: '',
         streetAddress2: '',
-        city: 'Dallas',
-        state: 'TX',
-        zipCode: '75214'
+        city: '',
+        state: '',
+        zipCode: ''
       },
-      categories: ['Coffee', 'Tea', 'Donuts'],
-      goods: ['Whole Bean Coffee', 'Loose Leaf Tea', 'Chocolate Donut', 'Cake Donut']
+      categories: [],
+      goods: []
     };
   }
 
@@ -46,8 +46,36 @@ class DashboardPage extends React.Component {
           user: xhr.response.user
         });
       }
+      this.loadCottage();
     });
     xhr.send();
+  };
+
+  loadCottage() {
+    console.log("going to load user");
+    axios({
+      method: 'post',
+      url: 'cc/cottages/load',
+      params: {
+        id: this.state.user.email
+      }
+    })
+    .then((response) => {
+      console.log(response);
+      this.loadReponseData(response.data[0]);
+    })
+  };
+
+  loadReponseData(data){
+      this.setState({address:{
+          streetAddress1: data.streetAddress1,
+          streetAddress2: data.streetAddress2,
+          city: data.city,
+          state: data.state,
+          zipCode: data.zipCode
+      }});
+      this.setState({categories: data.category});
+      this.setState({goods: data.inventory});
   };
 
  updateMerchant() {
@@ -64,19 +92,10 @@ class DashboardPage extends React.Component {
         category : this.state.categories,
         inventory: this.state.goods
       }
-    }).then((response) => {
+    })
+    .then((response) => {
       console.log(response.data);
-      if(response){
-        this.setState({address:{
-            streetAddress1: response.data.streetAddress1,
-            streetAddress2: response.data.streetAddress2,
-            city: response.data.city,
-            state: response.data.state,
-            zipCode: response.data.zipCode
-        }});
-        this.setState({categories: response.data.category});
-        this.setState({goods: response.data.inventory});
-      }
+      this.loadReponseData(response.data);
     })
   }
 
