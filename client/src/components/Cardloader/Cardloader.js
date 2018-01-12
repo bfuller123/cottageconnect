@@ -16,8 +16,7 @@ class Cardloader extends React.Component {
 
      <div className="flex-container">
         <div className="cards">
-          <h2 className="ResultsHed">Results</h2>
-            {list}
+          {list}
         </div>
      </div>
     );
