@@ -66,14 +66,14 @@ class Searchbar extends React.Component {
            <h1 className="SearchHed">Search for a Cottage</h1>
 
             <div className="row">
-              <div className="col-lg-4 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12">
+              <div className="col-lg-3 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-12">
                 <div className="form-group">
                   <h3 className="search seachHeader">Food
                   <input type="text" className="search searchInput" id="searchFood" placeholder="ex. cookies" onChange={(e) => this.foodChangeHandler(e)} /></h3>
                 </div>
               </div>
 
-              <div className="col-lg-4 col-md-5 col-sm-12">
+              <div className="col-lg-3 col-md-4 col-sm-12">
                 <div className="form-group">
                   <h3 className="search seachHeader">Area
                   <input type="text" className="search searchInput" id="searchCity" placeholder="ex. Dallas, TX or 75202" onChange={(e) => this.zipCodeChangeHandler(e)} /></h3>
@@ -93,11 +93,8 @@ class Searchbar extends React.Component {
                   </h3>
                 </div>
               </div>
-            </div>
 
-            <div className="row">
-              <div className="col-lg-1 col-lg-offset-1">
-
+              <div className="col-lg-1 col-md-1 col-sm-6">
                 <input type="submit" className="button search searchButton p-3" id="searchSubmit" value="Search" onClick={(e) => this.sendInfo(e)} />
               </div>
             </div>

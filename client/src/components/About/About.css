@@ -1,6 +1,7 @@
 .AboutBox {
     background-color: #fede8a;
-	height: 500px;
+	height: 100%;
+	width: 100%;
 	margin-top: 6px;
 }
 
@@ -12,4 +13,5 @@
 .AboutText{
 	text-align: center;
 	font-size: 130%;
+	margin-bottom: 80px;
 }
