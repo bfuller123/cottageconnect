@@ -20,7 +20,9 @@ router.route("/merchants/search/:address:/:distance")
 // Matches with "/cc/merchants"
 router.route("/merchants")
 	.get(ccController.findAllMerchants)
-	.post(ccController.createCottage);
+
+router.route("/merchants/create")
+  .post(ccController.createCottage);
 
 router.route("/merchants/zip/:zipCode")
   .get(ccController.findMerchantByZip);
