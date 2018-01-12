@@ -101,6 +101,7 @@ class Searchbar extends React.Component {
 
             <div className="row">
               <div className="col-lg-10 col-lg-offset-1 col-md-6 col-sm-12">
+                <h2 className="ResultsHed">Results</h2>
                 <CardLoader clickHandler={this.props.clickHandler} results={this.state.searchResults}/>
               </div>
             </div>
