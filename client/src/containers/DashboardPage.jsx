@@ -1,6 +1,7 @@
 import React from 'react';
 import Auth from '../modules/Auth';
 import Dashboard from '../components/Dashboard.jsx';
+import axios from 'axios';
 
 //TODO: Make it so it pulls in the information for the categories, goods, and address from the correct tables.
 
@@ -49,28 +50,35 @@ class DashboardPage extends React.Component {
     xhr.send();
   };
 
-  updateMerchant(){
-    let id = this.state.user.email;
-    let streetAddress1 = this.state.address.streetAddress1;
-    let streetAddress2 = this.state.address.streetAddress2;
-    let city = this.state.address.city;
-    let state = this.state.address.state;
-    let zipCode = this.state.address.zipCode;
-    let categories = this.state.categories;
-    let goods = this.state.goods;
-    const xhr = new XMLHttpRequest();
-    xhr.open('post', '/cc/cottages/update');
-    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    // set the authorization HTTP header
-    xhr.setRequestHeader('Authorization', `bearer ${Auth.getToken()}`);
-    xhr.responseType = 'json';
-    xhr.addEventListener('load', () => {
-      if (xhr.status === 200) {
-        console.log(xhr.response.message);
+ updateMerchant() {
+    axios({
+      method: 'post',
+      url: 'cc/cottages/update',
+      params: {
+        id : this.state.user.email,
+        streetAddress1 : this.state.address.streetAddress1,
+        streetAddress2 : this.state.address.streetAddress2,
+        city : this.state.address.city,
+        state : this.state.address.state,
+        zipCode : this.state.address.zipCode,
+        category : this.state.categories,
+        inventory: this.state.goods
       }
-    });
-    xhr.send(`id=${id}&streetAddress1=${streetAddress1}&streetAddress2=${streetAddress2}&city=${city}&state=${state}&zipCode=${zipCode}&category=${categories}&inventory=${goods}`);
-  };
+    }).then((response) => {
+      console.log(response.data);
+      if(response){
+        this.setState({address:{
+            streetAddress1: response.data.streetAddress1,
+            streetAddress2: response.data.streetAddress2,
+            city: response.data.city,
+            state: response.data.state,
+            zipCode: response.data.zipCode
+        }});
+        this.setState({categories: response.data.category});
+        this.setState({goods: response.data.inventory});
+      }
+    })
+  }
 
   addClicked(e) {
     let itemClicked = e.target.id;
