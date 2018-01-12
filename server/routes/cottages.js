@@ -36,18 +36,18 @@ router.route("/customers")
 	.get(ccController.findAllCustomers)
 	.post(ccController.createCottage);
 
-// Matches with "/cc/cottages/:id
+// Matches with "/cc/cottages/update
 router.route("/cottages/update")
 	// .get(ccController.findCottageById)
 	.post(ccController.updateCottage)
 	// .delete(ccController.removeCottage);
 
 
-// Matches with "/cc/cottages/:id
-router.route("/cottages/:id")
-	.get(ccController.findCottageById)
-	.put(ccController.updateCottage)
-	.delete(ccController.removeCottage);
+// Matches with "/cc/cottages/load/:id
+router.route("/cottages/load/")
+	.post(ccController.findCottageById)
+	//.put(ccController.updateCottage)
+	//.delete(ccController.removeCottage);
 //==========================================
 // Category Routes:
 //==========================================
