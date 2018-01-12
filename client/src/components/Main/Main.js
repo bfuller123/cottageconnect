@@ -5,7 +5,14 @@ class MainTwo extends Component {
   render() {
     return (
       <div className="backgroundMain">
+      <br />
+       <br />
+        <br />
+         <br />  
+          <br />
+           <br /> 
         <div className="row">
+        
           <div className="container-fluid text-center col-lg-12 col-md-12 col-sm-12">
               <h1 id="MainHed">Cottage Connect</h1>
               <h2 id="MainDek">Uniting people with homemade products</h2>
