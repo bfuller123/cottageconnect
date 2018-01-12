@@ -1,6 +1,7 @@
 import React from 'react';
 import Auth from '../modules/Auth';
 import Dashboard from '../components/Dashboard.jsx';
+import axios from 'axios';
 
 //TODO: Make it so it pulls in the information for the categories, goods, and address from the correct tables.
 
@@ -17,14 +18,14 @@ class DashboardPage extends React.Component {
       secretData: '',
       user: {},
       address: {
-        streetAddress1: '5414 Alton Ave',
+        streetAddress1: '',
         streetAddress2: '',
-        city: 'Dallas',
-        state: 'TX',
-        zipCode: '75214'
+        city: '',
+        state: '',
+        zipCode: ''
       },
-      categories: ['Coffee', 'Tea', 'Donuts'],
-      goods: ['Whole Bean Coffee', 'Loose Leaf Tea', 'Chocolate Donut', 'Cake Donut']
+      categories: [],
+      goods: []
     };
   }
 
@@ -45,24 +46,58 @@ class DashboardPage extends React.Component {
           user: xhr.response.user
         });
       }
+      this.loadCottage();
     });
     xhr.send();
   };
 
-  updateMerchant(){
-    const xhr = new XMLHttpRequest();
-    xhr.open('get', '/api/updateMerchant/Brett');
-    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    // set the authorization HTTP header
-    xhr.setRequestHeader('Authorization', `bearer ${Auth.getToken()}`);
-    xhr.responseType = 'json';
-    xhr.addEventListener('load', () => {
-      if (xhr.status === 200) {
-        console.log(xhr.response.message);
+  loadCottage() {
+    console.log("going to load user");
+    axios({
+      method: 'post',
+      url: 'cc/cottages/load',
+      params: {
+        id: this.state.user.email
       }
-    });
-    xhr.send();
+    })
+    .then((response) => {
+      console.log(response);
+      this.loadReponseData(response.data[0]);
+    })
   };
+
+  loadReponseData(data){
+      this.setState({address:{
+          streetAddress1: data.streetAddress1,
+          streetAddress2: data.streetAddress2,
+          city: data.city,
+          state: data.state,
+          zipCode: data.zipCode
+      }});
+      this.setState({categories: data.category});
+      this.setState({goods: data.inventory});
+  };
+
+ updateMerchant() {
+    axios({
+      method: 'post',
+      url: 'cc/cottages/update',
+      params: {
+        id : this.state.user.email,
+        streetAddress1 : this.state.address.streetAddress1,
+        streetAddress2 : this.state.address.streetAddress2,
+        city : this.state.address.city,
+        state : this.state.address.state,
+        zipCode : this.state.address.zipCode,
+        category : this.state.categories,
+        inventory: this.state.goods
+      }
+    })
+    .then((response) => {
+      console.log(response.data);
+      this.loadReponseData(response.data);
+    })
+  }
 
   addClicked(e) {
     let itemClicked = e.target.id;
@@ -91,7 +126,7 @@ class DashboardPage extends React.Component {
    * Render the component.
    */
   render() {
-    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} btnClickHandler={this.updateMerchant} addClick={(e) => {this.addClicked(e)}} removeClick={(e) => {this.removeClicked(e)}} itemChanged={(e) => {this.itemChange(e)}} /></div>);
+    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} btnClickHandler={() => {this.updateMerchant()}} addClick={(e) => {this.addClicked(e)}} removeClick={(e) => {this.removeClicked(e)}} itemChanged={(e) => {this.itemChange(e)}} /></div>);
   }
 
 }

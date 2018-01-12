@@ -11,7 +11,7 @@ const CottageSchema = new Schema({
     isMerchant: {type: Boolean, default: false},
     isActiveCustomer: {type: Boolean, default: false},
     businessName: {type: String, required: false},
-    category: {type: String, required: false},
+    category: [{type: String, required: false}],
     inventory: [{type: String}],
     website: {type: String, required: false},
     streetAddress1: {type: String, required: false},
@@ -23,8 +23,8 @@ const CottageSchema = new Schema({
     longitude: {type: Number, required: false},
     latitude: {type: Number, required: false},
     phoneNumber:{type: String, required: false},
-    firstName:{type: String, required: false}, 
-    middleName:{type: String, required: false}, 
+    firstName:{type: String, required: false},
+    middleName:{type: String, required: false},
     lastName:{type: String, required: false}
 });
 

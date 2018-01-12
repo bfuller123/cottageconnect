@@ -27,9 +27,9 @@ module.exports = {
     let maxLat = req.params.maxlat;
     let minLng = req.params.minlng;
     let maxLng = req.params.maxlng;
-    
+
     db.Cottage
-      .find({isMerchant: true, 
+      .find({isMerchant: true,
             latitude: {$gt: minLat, $lt: maxLat},
             longitude:{$gt: minLng, $lt: maxLat}
       })
@@ -63,19 +63,19 @@ module.exports = {
   },
   findCottageById: function(req, res) {
     db.Cottage
-      .findById(req.params.id)
+      .find({email: req.query.id})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   updateCottage: function(req, res) {
     db.Cottage
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({ email: req.query.id }, req.query, {new: true})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   removeCottage: function(req, res) {
     db.Cottage
-      .findById({ _id: req.params.id })
+      .findById({ email: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
