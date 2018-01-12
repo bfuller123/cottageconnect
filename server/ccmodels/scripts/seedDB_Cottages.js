@@ -141,7 +141,7 @@ const cottageSeed = [
         isActiveCustomer: false,
         businessName: "Curious Coffee",
         website: "",
-        email: "CuriousCoffee@cottageconnect.com",
+        email: "bfuller123@gmail.com",
         streetAddress1:"5414 Alton Ave",
         streetAddress2: "",
         city: "Dallas",
