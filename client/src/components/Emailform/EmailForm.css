@@ -2,6 +2,10 @@
   display: none;
 }
 
+#emailHede{
+	margin-top: 20px;
+}
+
 #emailBody {
   height: 25vh;
   width: 50%;
@@ -10,6 +14,8 @@
 #emailForm {
   margin-left: 33%;
   font-family: 'Montserrat', sans-serif;
+  padding-bottom: 20px;
+  padding-top: 30px;
 }
 
 #emailForm>h2{
@@ -18,4 +24,9 @@
 
 #emailSubject {
   width: 32.8%;
+}
+
+.wholeEmail{
+    background-color: #fede8a;
+    margin-top: 6px;
 }

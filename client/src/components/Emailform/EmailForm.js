@@ -3,8 +3,10 @@ import './EmailForm.css';
 
 const EmailForm = (props) => {
   return (
+
+  <div className="wholeEmail">
     <div className="invisible" id="emailForm">
-      <h2>Contact The Cottage</h2>
+      <h2 id="emailHede">Contact The Cottage</h2>
       <form>
         <h4>To: {props.to}</h4>
         <h4>From: <input type="text" id="emailFrom" placeholder="Your Email"/></h4>
@@ -12,9 +14,11 @@ const EmailForm = (props) => {
         <br />
         <textarea id="emailBody"> </textarea>
         <br />
-        <button onClick={props.clickHandler} id="emailSendButton">Send</button>
+        <button onClick={props.clickHandler} id="emailSendButton" className="smallButton">Send</button>
       </form>
     </div>
+  </div>
+
   )
 }
 
