@@ -5,6 +5,7 @@ const EmailForm = (props) => {
   return (
 
   <div className="wholeEmail">
+    <h2 className="invisible" id="toast">Email Sent!</h2>
     <div className="invisible" id="emailForm">
       <h2 id="emailHede">Contact The Cottage</h2>
       <form>

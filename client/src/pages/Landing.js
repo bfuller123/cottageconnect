@@ -40,6 +40,13 @@ class Landing extends React.Component {
     document.getElementById('Search').scrollIntoView(true);
     // set route to send through the email
     this.clearEmailForm();
+    this.emailSentMessage();
+  }
+
+  emailSentMessage(){
+    let toast = document.getElementById('toast');
+    toast.classList.remove('invisible');
+    setTimeout(function(){toast.classList.add('invisible')}, 2000);
   }
 
   render() {
