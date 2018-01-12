@@ -37,10 +37,10 @@ router.route("/customers")
 	.post(ccController.createCottage);
 
 // Matches with "/cc/cottages/:id
-router.route("/cottages/:id")
-	.get(ccController.findCottageById)
-	.put(ccController.updateCottage)
-	.delete(ccController.removeCottage);
+router.route("/cottages/update")
+	// .get(ccController.findCottageById)
+	.post(ccController.updateCottage)
+	// .delete(ccController.removeCottage);
 
 
 // Matches with "/cc/cottages/:id

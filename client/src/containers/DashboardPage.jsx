@@ -50,8 +50,16 @@ class DashboardPage extends React.Component {
   };
 
   updateMerchant(){
+    let id = this.state.user.email;
+    let streetAddress1 = this.state.address.streetAddress1;
+    let streetAddress2 = this.state.address.streetAddress2;
+    let city = this.state.address.city;
+    let state = this.state.address.state;
+    let zipCode = this.state.address.zipCode;
+    let categories = this.state.categories;
+    let goods = this.state.goods;
     const xhr = new XMLHttpRequest();
-    xhr.open('get', '/api/updateMerchant/Brett');
+    xhr.open('post', '/cc/cottages/update');
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     // set the authorization HTTP header
     xhr.setRequestHeader('Authorization', `bearer ${Auth.getToken()}`);
@@ -61,7 +69,7 @@ class DashboardPage extends React.Component {
         console.log(xhr.response.message);
       }
     });
-    xhr.send();
+    xhr.send(`id=${id}&streetAddress1=${streetAddress1}&streetAddress2=${streetAddress2}&city=${city}&state=${state}&zipCode=${zipCode}&category=${categories}&inventory=${goods}`);
   };
 
   addClicked(e) {
@@ -91,7 +99,7 @@ class DashboardPage extends React.Component {
    * Render the component.
    */
   render() {
-    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} btnClickHandler={this.updateMerchant} addClick={(e) => {this.addClicked(e)}} removeClick={(e) => {this.removeClicked(e)}} itemChanged={(e) => {this.itemChange(e)}} /></div>);
+    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} btnClickHandler={() => {this.updateMerchant()}} addClick={(e) => {this.addClicked(e)}} removeClick={(e) => {this.removeClicked(e)}} itemChanged={(e) => {this.itemChange(e)}} /></div>);
   }
 
 }
