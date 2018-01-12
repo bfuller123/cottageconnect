@@ -1,4 +1,5 @@
 const express = require('express');
+const ccController = require("../controllers/ccController");
 
 const router = new express.Router();
 
@@ -10,11 +11,11 @@ router.get('/dashboard', (req, res) => {
   });
 });
 
-router.get('/updateMerchant/:id', function(req, res){
+router.post('/updateMerchant/', function(req, res){
   res.status(200).json({
     message: "You are hitting the correct place"
   })
-  console.log(req.params.id);
+  //code to ccController here
 });
 
 module.exports = router;

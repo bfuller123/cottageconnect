@@ -3,6 +3,7 @@ import MainTwo from "./../components/Main";
 import About from "./../components/About";
 import Search from "./../components/Search";
 import EmailForm from "./../components/Emailform";
+import axios from 'axios';
 
 class Landing extends React.Component {
 
@@ -39,6 +40,7 @@ class Landing extends React.Component {
     document.getElementById('emailForm').classList.add("invisible");
     document.getElementById('Search').scrollIntoView(true);
     // set route to send through the email
+    
     this.clearEmailForm();
   }
 

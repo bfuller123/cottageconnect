@@ -27,9 +27,9 @@ module.exports = {
     let maxLat = req.params.maxlat;
     let minLng = req.params.minlng;
     let maxLng = req.params.maxlng;
-    
+
     db.Cottage
-      .find({isMerchant: true, 
+      .find({isMerchant: true,
             latitude: {$gt: minLat, $lt: maxLat},
             longitude:{$gt: minLng, $lt: maxLat}
       })
@@ -69,7 +69,7 @@ module.exports = {
   },
   updateCottage: function(req, res) {
     db.Cottage
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({ email: req.body.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
