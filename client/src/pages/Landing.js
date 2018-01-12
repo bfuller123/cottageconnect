@@ -3,6 +3,7 @@ import MainTwo from "./../components/Main";
 import About from "./../components/About";
 import Search from "./../components/Search";
 import EmailForm from "./../components/Emailform";
+import axios from 'axios';
 
 class Landing extends React.Component {
 
@@ -39,7 +40,26 @@ class Landing extends React.Component {
     document.getElementById('emailForm').classList.add("invisible");
     document.getElementById('Search').scrollIntoView(true);
     // set route to send through the email
+    axios({
+      method: 'post',
+      url: 'send/mail',
+      params: {
+        emailTo: this.state.cottageToEmailId,
+        emailFrom: document.getElementById('emailFrom').value,
+        emailSubject: document.getElementById('emailSubject').value,
+        emailBody: document.getElementById('emailBody').value
+      }
+    }).then((response) => {
+      console.log(response);
+    })
     this.clearEmailForm();
+    this.emailSentMessage();
+  }
+
+  emailSentMessage(){
+    let toast = document.getElementById('toast');
+    toast.classList.remove('invisible');
+    setTimeout(function(){toast.classList.add('invisible')}, 2000);
   }
 
   render() {
