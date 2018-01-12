@@ -82,7 +82,8 @@ class Searchbar extends React.Component {
 
               <div className="col-lg-2 col-md-6 col-sm-6">
                 <div className="form-group">
-                  <h3 className="search seachHeader">Radius (miles)
+                  <h3 className="search seachHeader">Radius (miles)</h3>
+                  <h3>
                     <select className="search searchInput" id="searchRadius" onChange={(e) => this.radiusChangeHandler(e)}>
                       <option value="5">5</option>
                       <option value="10">10</option>
@@ -94,8 +95,10 @@ class Searchbar extends React.Component {
                 </div>
               </div>
 
+              <br />
+
               <div className="col-lg-1 col-md-1 col-sm-6">
-                <input type="submit" className="button search searchButton p-3" id="searchSubmit" value="Search" onClick={(e) => this.sendInfo(e)} />
+                <h3><input type="submit" className="button search searchButton p-3" id="searchSubmit" value="Search" onClick={(e) => this.sendInfo(e)} /></h3>
               </div>
             </div>
 
