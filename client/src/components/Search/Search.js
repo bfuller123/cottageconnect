@@ -82,7 +82,7 @@ class Searchbar extends React.Component {
 
               <div className="col-lg-2 col-md-6 col-sm-6">
                 <div className="form-group">
-                  <h3 className="search seachHeader">Radius
+                  <h3 className="search seachHeader">Radius (miles)
                     <select className="search searchInput" id="searchRadius" onChange={(e) => this.radiusChangeHandler(e)}>
                       <option value="5">5</option>
                       <option value="10">10</option>
