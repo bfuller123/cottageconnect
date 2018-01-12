@@ -26,11 +26,14 @@ module.exports = {
             // console.log("Latitude: " + lat);
             // console.log("Longitude: " + lng);
 
-            var objGeoCoded = {
-                lat: lat,
-                lng: lng
-            };
+            // var objGeoCoded = {
+            //     lat: lat,
+            //     lng: lng
+            // };
+
+        var objGeoCoded = [lat, lng];
         console.log(objGeoCoded);
+
         return (objGeoCoded);
 
         })
@@ -38,7 +41,7 @@ module.exports = {
             console.log(error);
         });
     }, // end of geocode
-
+    
 
     radiusSearch: function (searchTerms){
 
