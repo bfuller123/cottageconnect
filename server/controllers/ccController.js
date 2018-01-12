@@ -69,7 +69,7 @@ module.exports = {
   },
   updateCottage: function(req, res) {
     db.Cottage
-      .findOneAndUpdate({ email: req.body.id }, req.body)
+      .findOneAndUpdate({ email: req.query.id }, req.query, {new: true})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
