@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 //==========================================
 // Search for a merchant by SearchBox:
 //==========================================
-router.route("/merchants/search/:minlat/:maxlat/:minlng/:maxlng")
+router.route("/merchants/search/:address:/:distance")
   .get(ccController.findMerchantBySearchBox);
 
 //==========================================

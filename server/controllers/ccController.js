@@ -13,8 +13,6 @@ mongoose.createConnection(
   }
 );
 
-
-
 // Defining methods for the ccController
 module.exports = {
 

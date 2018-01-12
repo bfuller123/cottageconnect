@@ -1,9 +1,21 @@
-const ccGeoHelper = require("./ccGeoHelper");
+const ccGeoHelper = require("./ccGeoHelperV4");
 
-var testme = ccGeoHelper.geocode("2727 Shelby Avenue, Dallas, TX 75219");
+console.log ("=================================");
+console.log ("Beginning the test. ");
+console.log ("Any good data should show up now.")
+console.log ("=================================");
+console.log ("");
+console.log ("");
 
-console.log(testme);
+var testme = ccGeoHelper.geocode("2727 Shelby Avenue, Dallas, TX 75219",10);
+	
+console.log (testme);
 
-var testme2 = ccGeoHelper.radiusSearch({ lat: 32.8074316, lon: -96.81256359999999, distance: 10 });
+console.log ("");
+console.log ("");
+console.log ("===============================================");
+console.log ("Anything AFTER this section is a console.log");
+console.log ("from INSIDE the geocode function that ");
+console.log ("isn't helping to fix the asynchronous issue.");
+console.log ("=============================================");
 
-// console.log(testme2);
