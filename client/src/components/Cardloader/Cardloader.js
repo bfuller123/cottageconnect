@@ -15,13 +15,11 @@ class Cardloader extends React.Component {
     return(
 
      <div className="flex-container">
-
         <div className="cards">
-          {list}
+          <h2 className="ResultsHed">Results</h2>
+            {list}
         </div>
-
      </div>
-
     );
   }
 }
