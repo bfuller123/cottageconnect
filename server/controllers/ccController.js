@@ -55,7 +55,7 @@ module.exports = {
   },
   createCottage: function(req, res) {
     db.Cottage
-      .create(req.body)
+      .create(req.query)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

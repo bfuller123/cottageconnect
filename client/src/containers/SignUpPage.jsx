@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios'
 import PropTypes from 'prop-types';
 import SignUpForm from '../components/SignUpForm.jsx';
 
@@ -23,6 +24,37 @@ class SignUpPage extends React.Component {
 
     this.processForm = this.processForm.bind(this);
     this.changeUser = this.changeUser.bind(this);
+  }
+
+  createCottage(name, email){
+    axios({
+      method: 'post',
+      url: '/cc/merchants/create',
+      params: {
+        userName: name,
+        isMerchant: true,
+        isActiveCustomer: true,
+        businessName: "",
+        website: "",
+        email: email,
+        streetAddress1:"",
+        streetAddress2: "",
+        city: "",
+        stateOrProvince: "",
+        zipCode: "",
+        county: "",
+        phoneNumber:"",
+        firstName: name,
+        middleName:"",
+        lastName:"",
+        category: [],
+        inventory: [],
+        dateAdded: new Date(Date.now())
+      }
+    })
+    .then(() => {
+      console.log('created cottage');
+    })
   }
 
   /**
@@ -71,6 +103,7 @@ class SignUpPage extends React.Component {
       }
     });
     xhr.send(formData);
+    this.createCottage(this.state.user.name, this.state.user.email);
   }
 
   /**
