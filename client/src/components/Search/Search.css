@@ -10,9 +10,14 @@
     padding-top: 50px;
 }
 
+#noResults{
+  text-align: center;
+}
+
 #searchSubmit{
 	margin-left: 20px;
 }
+
 
 input[type=text] {
     padding: 6px 10px;

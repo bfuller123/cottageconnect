@@ -41,9 +41,16 @@ class Searchbar extends React.Component {
     //have to use arrow function here and on line 52 since es6 arrow functions since they always use this of the enclosing scope and therefore can place this to SearchBar!!
     .then((response) => {
       console.log(response.data);
-      newData = response.data.slice(0, 3);
-      console.log(newData);
-      this.setState({searchResults: newData});
+      if(response.data.length == 0){
+        document.getElementById('noResults').classList.remove('invisible');
+        this.setState({searchResults:[]});
+      }
+      else {
+        document.getElementById('noResults').classList.add('invisible');
+        newData = response.data.slice(0, 3);
+        console.log(newData);
+        this.setState({searchResults: newData});
+      }
     })
   };
 
@@ -105,6 +112,7 @@ class Searchbar extends React.Component {
             <div className="row">
               <div className="col-lg-10 col-lg-offset-1 col-md-6 col-sm-12">
                 <h2 className="ResultsHed">Results</h2>
+                <h3 className="invisible" id="noResults">No Results. Please try adjusting your search area, or the food (either type or plurality)</h3>
                 <CardLoader clickHandler={this.props.clickHandler} results={this.state.searchResults}/>
               </div>
             </div>

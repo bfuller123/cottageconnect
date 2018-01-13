@@ -85,7 +85,7 @@ module.exports = {
     let food = req.params.food;
     let foodToSearch = new RegExp(food, 'i');
     db.Cottage
-      .find({zipCode: zipToSearch, businessName: foodToSearch})
+      .find({ $and:[{zipCode: zipToSearch},{$or:[{businessName: foodToSearch},{category: foodToSearch}, {inventory: foodToSearch}]}]})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -94,7 +94,7 @@ module.exports = {
     let zip = req.params.zipCode;
     let zipToSearch = new RegExp(zip);
     db.Cottage
-      .find({zipCode: zipToSearch})
+      .find({$or: [{zipCode: zipToSearch}, {city: zipToSearch}, {state: zipToSearch}]})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -103,7 +103,7 @@ module.exports = {
     let food = req.params.food;
     let foodToSearch = new RegExp(food, 'i');
     db.Cottage
-      .find({businessName: foodToSearch})
+      .find({ $or: [{businessName: foodToSearch},{category: foodToSearch}, {inventory: foodToSearch}]})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
