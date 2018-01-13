@@ -19,9 +19,10 @@ So you focus on making the best items you can, and let us handle bringing your c
 
   #### Front-End
   * HTML/CSS
-    * including Grid and Flexbox
+    * including Flexbox
   * React
-  
+  * axios
+
   #### Back-End
   * NodeJS
   * MongoDB/Mongoose
@@ -33,17 +34,35 @@ So you focus on making the best items you can, and let us handle bringing your c
   * jsonwebtoken
   * validator
 
-## Walkthrough 
+## Walkthrough
+
+Cottage Connect has two sides or its users, merchants (also known as cottages), and shoppers. All users will initially hit our landing page, which is designed to be as minimal as possible to make it easy on our users. It is inspired by single page apps, while still having a portal that our merchants can use. Everything a shopper can want is available on this landing page.
+![alt text](./README/ccLanding.png "Landing Page")
+
+  #### Shopper
+  A shopper can search our system by putting in a food that they are interested in, or the area they are looking for items.
+  ![alt text](./README/ccSearch.png "Search Area")
+  ![alt text](./README/ccResults.png "Search Results")
+
+  Once the shopper has found the cottage they would like to learn more about they click the contact button to use our system to send a direct email to shop.
+  ![alt text](./README/ccEmail.png "Email Cottage")
 
   #### Cottage
-  We will put in the info on how shops build their pages
-  
-  #### Users
-  How a user can search
+
+  The first thing a cottage will do is to sign up, at which our system will create both their user information as well begin setting up their cottage.
+  ![alt text](./README/ccSignup.png "Sign in Page")
+
+  After signing up, they will be asked to login on our login page.
+  ![alt text](./README/ccLogin.png "Login Page")
+
+  Once logged in, the cottage can edit everything about their cottage from its name, to its inventory. These results are instantly updated into our database so shoppers can instantly be drawn into their goods!
+  ![alt text](./README/ccMerchantPortal.png "Merchant Portal")
+
+
 
 ## Authors (alphabetical order)
 
   #### [Brett Fuller](https://github.com/bfuller123)
   #### [Conrad Harrison](https://github.com/RadCon4)
   #### [Kim Kaufman](https://github.com/kimgomizzou)
-  #### [David Staas](https://github.com/DavidStaas) 
+  #### [David Staas](https://github.com/DavidStaas)

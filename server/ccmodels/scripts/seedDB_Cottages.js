@@ -32,7 +32,7 @@ const cottageSeed = [
         middleName:"Jonah",
         lastName:"Jameson",
         category: ["Breads, rolls, biscuits", "tarts"],
-        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
+        inventory: ["Apple tarts"],
         dateAdded: new Date(Date.now())
     },
     {
@@ -53,9 +53,8 @@ const cottageSeed = [
         phoneNumber:"214-412-1234",
         firstName:"Peter",
         lastName:"Parker",
-        category: "Breads, rolls, biscuits",
-        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
-
+        category: ["Dehydrated fruit or vegetables, including dried beans"],
+        inventory: ["Dried Fruits","Dried Green Bean Snacks"],
         dateAdded: new Date(Date.now())
     },
     {
@@ -75,8 +74,8 @@ const cottageSeed = [
         phoneNumber:"214-442-2334",
         firstName:"Rhonda",
         lastName:"Fonda",
-        category: "Breads, rolls, biscuits",
-        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
+        category: ["Breads, rolls, biscuits"],
+        inventory: ["Sourdough Biscuits", "sourdough bread"],
         dateAdded: new Date(Date.now())
     },
     {
@@ -96,8 +95,8 @@ const cottageSeed = [
         phoneNumber:"972-432-6742",
         firstName:"Bob",
         lastName:"Gambini",
-        category: "Breads, rolls, biscuits",
-        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
+        category: ["Cakes"],
+        inventory: ["Dopey's Lop-sided cakes"],
         dateAdded: new Date(Date.now())
     },
 
@@ -112,6 +111,8 @@ const cottageSeed = [
         latitude: 32.7766642,
         firstName:"Wanda",
         lastName:"Fish",
+        category: ["Mustard"],
+        inventory: ["stone ground mustard"],
         dateAdded: new Date(Date.now())
     },
 
@@ -131,8 +132,8 @@ const cottageSeed = [
         phoneNumber:"214-528-4512",
         firstName:"Alejandro",
         lastName:"Ojeda",
-        category: "Unroasted nut butters",
-        inventory: ["Peanut Butter","Mazola Oil","Butter","Pepperoni"],
+        category: ["Cakes"],
+        inventory: ["Meatless tamale cakes"],
         dateAdded: new Date(Date.now())
     },
     {
@@ -141,7 +142,7 @@ const cottageSeed = [
         isActiveCustomer: false,
         businessName: "Curious Coffee",
         website: "",
-        email: "bfuller123@gmail.com",
+        email: "CuriousCoffee@cottageconnect.com",
         streetAddress1:"5414 Alton Ave",
         streetAddress2: "",
         city: "Dallas",
@@ -154,8 +155,8 @@ const cottageSeed = [
         firstName:"Albert",
         middleName:"Munich",
         lastName:"Munich",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Coffee"],
+        category: ["Roasted coffee or dry tea"],
+        inventory: ["Coffee", "decaffeinated coffee"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -177,7 +178,7 @@ const cottageSeed = [
         firstName:"Bob",
         middleName:"Munich",
         lastName:"Belcher",
-        category: "Cakes",
+        category: ["Cakes"],
         inventory: ["Patty","Uranium Yellow","Ice Cream"],
         dateAdded: new Date(Date.now())
       },
@@ -200,7 +201,7 @@ const cottageSeed = [
         firstName:"Teddy",
         middleName:"Munich",
         lastName:"Spaghetti",
-        category: "Roasted coffee or dry tea",
+        category: ["Roasted coffee or dry tea"],
         inventory: ["Italian Roast","Sumatra","Earl Gray"],
         dateAdded: new Date(Date.now())
       },
@@ -223,7 +224,7 @@ const cottageSeed = [
         firstName:"Mort",
         middleName:"Munich",
         lastName:"Mortician",
-        category: "Dry mixes",
+        category: ["Dry mixes"],
         inventory: ["Flour","Flowers","Fleur de Lee"],
         dateAdded: new Date(Date.now())
       },
@@ -246,7 +247,7 @@ const cottageSeed = [
         firstName:"Tina",
         middleName:"Munich",
         lastName:"Belcher",
-        category: "Roasted coffee or dry tea",
+        category: ["Roasted coffee or dry tea"],
         inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
       },
@@ -269,7 +270,7 @@ const cottageSeed = [
         firstName:"Felix",
         middleName:"Munich",
         lastName:"Fishoder",
-        category: "Candy",
+        category: ["Candy", "Dehydrated fruit or vegetables, including dried beans"],
         inventory: ["Dried Brussel Sprouts"],
         dateAdded: new Date(Date.now())
       },
@@ -292,7 +293,7 @@ const cottageSeed = [
         firstName:"Calvin",
         middleName:"Munich",
         lastName:"Fishoder",
-        category: "Roasted coffee or dry tea",
+        category: ["Roasted coffee or dry tea"],
         inventory: ["Hawiian Punch","Dandilion Wine Flavored Sumatra"],
         dateAdded: new Date(Date.now())
       },
@@ -315,7 +316,7 @@ const cottageSeed = [
         firstName:"Aziz",
         middleName:"Munich",
         lastName:"Ansari",
-        category: "Dehydrated fruit or vegetables, including dried beans",
+        category: ["Dehydrated fruit or vegetables, including dried beans"],
         inventory: ["Dried Apples","Crystalized Pineapple"],
         dateAdded: new Date(Date.now())
       },
@@ -338,7 +339,7 @@ const cottageSeed = [
         firstName:"Ron",
         middleName:"Ulysses",
         lastName:"Swanson",
-        category: "Popcorn and popcorn snacks",
+        category: ["Popcorn and popcorn snacks"],
         inventory: ["Orville's"],
         dateAdded: new Date(Date.now())
       },
@@ -361,7 +362,7 @@ const cottageSeed = [
         firstName:"Tammy",
         middleName:"Munich",
         lastName:"Swanson",
-        category: "Breads, rolls, biscuits",
+        category: ["Breads, rolls, biscuits", "candy"],
         inventory: ["Egg","Bacon"],
         dateAdded: new Date(Date.now())
       },
@@ -384,8 +385,8 @@ const cottageSeed = [
         firstName:"Jimmy Jr",
         middleName:"Munich",
         lastName:"Pesto",
-        category: "Sweet breads, muffins",
-        inventory: ["Egg","Sausage","Bacon"],
+        category: ["Sweet breads, muffins"],
+        inventory: ["bluberry muffins","Sausage","Bacon"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -407,8 +408,8 @@ const cottageSeed = [
         firstName:"Linda",
         middleName:"Munich",
         lastName:"Belcher",
-        category: "Cakes",
-        inventory: ["Egg","Spam"],
+        category: ["Pastries"],
+        inventory: ["blueberry scones","raspberry scones"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -430,8 +431,8 @@ const cottageSeed = [
         firstName:"Louise",
         middleName:"Munich",
         lastName:"Belcher",
-        category: "Pastries",
-        inventory: ["Egg","Bacon","Spam"],
+        category: ["Cookies"],
+        inventory: ["Oatmeal cookies","chocolate chip cookies","spam cookies"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -453,8 +454,8 @@ const cottageSeed = [
         firstName:"Zeke",
         middleName:"",
         lastName:"",
-        category: "Cookies",
-        inventory: ["Egg","Bacon","Sausage","Spam"],
+        category: ["Candy"],
+        inventory: ["butterscoth candy, butterscotch toffee"],
         dateAdded: new Date(Date.now())
     },
     {
@@ -476,8 +477,8 @@ const cottageSeed = [
         firstName:"Tammy",
         middleName:"",
         lastName:"",
-        category: "Coated and uncoated nuts",
-        inventory: ["Spam","Bacon","Sausage","Spam"],
+        category: ["Breads, rolls, biscuits"],
+        inventory: ["stone-ground bread","cinnamon rolls","Sausage biscuits"],
         dateAdded: new Date(Date.now())
     },{
         userName: "Nope",
@@ -498,8 +499,8 @@ const cottageSeed = [
         firstName:"Gerry",
         middleName:"",
         lastName:"Gergich",
-        category: "Unroasted nut butters",
-        inventory: ["Spam","Egg","Spam","Spam","Bacon","Spam"],
+        category: ["Unroasted nut butters"],
+        inventory: ["almond butter","peanut butter","gerry's healthy walnut butter"],
         dateAdded: new Date(Date.now())
     },
     {
@@ -521,8 +522,8 @@ const cottageSeed = [
         firstName:"Bruce",
         middleName:"",
         lastName:"Banner",
-        category: "Fruit butters",
-        inventory: ["Spam","Spam","Spam","Egg","Spam"],
+        category: ["Roasted coffee or dry tea"],
+        inventory: ["Gamma Coffee"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -544,8 +545,8 @@ const cottageSeed = [
         firstName:"Peter",
         middleName:"",
         lastName:"Parker",
-        category: "Fruit pies",
-        inventory: ["Spam","Spam","Spam","Spam","Spam","Spam","Baked Beans","Spam","Spam","Spam","Spam"],
+        category: ["Pastries"],
+        inventory: ["Applie pie","blueberry pie","anti-Venom pie"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -567,8 +568,8 @@ const cottageSeed = [
         firstName:"Donald",
         middleName:"",
         lastName:"Blake",
-        category: "Dehydrated fruit or vegetables, including dried beans",
-        inventory: ["Lobster Thermidor aux Crevettes with a mornay sauce served in a Provencale manner with shallots and aubergines garnished with truffle pate, brandy and with a fried egg on top","Spam"],
+        category: ["Pastries"],
+        inventory: ["Golden Apple Pie", "Lobster Thermidor aux Crevettes with a mornay sauce served in a Provencale manner with shallots and aubergines garnished with truffle pate, brandy and with a fried egg on top","Spam"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -590,6 +591,8 @@ const cottageSeed = [
         firstName:"Steve",
         middleName:"",
         lastName:"Rogers",
+        category: ["Cakes"],
+        inventory: ["Red white and blue cakes"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -611,6 +614,8 @@ const cottageSeed = [
         firstName:"Stephen",
         middleName:"",
         lastName:"Strange",
+        category: ["Roasted coffee or dry tea"],
+        inventory: ["herbal tea, green tea, black tea"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -632,6 +637,8 @@ const cottageSeed = [
         firstName:"Reed",
         middleName:"",
         lastName:"Richards",
+        category: ["Candy"],
+        inventory: ["Universal gob-stoppers", "Negative Zone sours"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -653,8 +660,8 @@ const cottageSeed = [
         firstName:"Carol",
         middleName:"",
         lastName:"Danvers",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Popcorn and popcorn snacks"],
+        inventory: ["kettle corn popcorn","unsalted popcorn"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -676,8 +683,8 @@ const cottageSeed = [
         firstName:"Diana",
         middleName:"",
         lastName:"Prince",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Roasted coffee or dry tea"],
+        inventory: ["Athena's coffee","Hercules' double strength espresso"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -699,8 +706,8 @@ const cottageSeed = [
         firstName:"Tony",
         middleName:"",
         lastName:"Stark",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Canned Jams and Jellies"],
+        inventory: ["grape jam", "strawberry jelly", "lingonberry jam"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -722,8 +729,8 @@ const cottageSeed = [
         firstName:"Luke",
         middleName:"",
         lastName:"Cage",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Candy"],
+        inventory: ["jawbreakers"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -745,8 +752,8 @@ const cottageSeed = [
         firstName:"Dany",
         middleName:"",
         lastName:"Rand",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Dehydrated fruit or vegetables, including dried beans", "Dry mixes", "Roasted coffee or dry tea"],
+        inventory: ["zen tea blend", "zen vegetable seasoning"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -768,8 +775,8 @@ const cottageSeed = [
         firstName:"Matt",
         middleName:"",
         lastName:"Murdock",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Breads, rolls, biscuits"],
+        inventory: ["croissants"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -791,8 +798,8 @@ const cottageSeed = [
         firstName:"Kitty",
         middleName:"",
         lastName:"Pryde",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Vinegar"],
+        inventory: ["apple cider vinegar","balsamic vinegar"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -814,8 +821,8 @@ const cottageSeed = [
         firstName:"Kurt",
         middleName:"",
         lastName:"Wagner",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Breads, rolls, biscuits"],
+        inventory: ["twisted pretzels"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -837,8 +844,8 @@ const cottageSeed = [
         firstName:"Peter",
         middleName:"",
         lastName:"Rasputin",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Cereal, including granola"],
+        inventory: ["osmium cut granola bars", "osmium cut granola cereal"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -860,8 +867,8 @@ const cottageSeed = [
         firstName:"Barbara",
         middleName:"",
         lastName:"Morse",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Breads, rolls, biscuits", "Sweet breads, muffins"],
+        inventory: ["honey-glazed rice cakes"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -883,8 +890,8 @@ const cottageSeed = [
         firstName:"Molly",
         middleName:"",
         lastName:"Hayes",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Canned Jams and Jellies"],
+        inventory: ["smashed grape jelly", "pulped strawberry jam"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -906,8 +913,8 @@ const cottageSeed = [
         firstName:"Chuck",
         middleName:"",
         lastName:"Xavier",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Dehydrated fruit or vegetables, including dried beans"],
+        inventory: ["dried artichokes", "dried quinoa", "dried lentils"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -929,8 +936,8 @@ const cottageSeed = [
         firstName:"Noran",
         middleName:"",
         lastName:"Radd",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Mustard"],
+        inventory: ["cosmic mustard"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -952,8 +959,8 @@ const cottageSeed = [
         firstName:"Oliver",
         middleName:"",
         lastName:"Queen",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Sweet breads, muffins", "Breads, rolls, biscuits"],
+        inventory: ["Bullseye cakes", "blueberry muffins"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -975,8 +982,8 @@ const cottageSeed = [
         firstName:"Selina",
         middleName:"",
         lastName:"Kyle",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Candy"],
+        inventory: ["chocolate covered pretzels"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -998,8 +1005,8 @@ const cottageSeed = [
         firstName:"Barry",
         middleName:"",
         lastName:"Allen",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Cereal, including granola"],
+        inventory: ["bite-size granola power bars"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1021,8 +1028,8 @@ const cottageSeed = [
         firstName:"Victor",
         middleName:"",
         lastName:"Stone",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Fruit pies"],
+        inventory: ["cherry fruit pie","blackberry fruit pie", "apple fruit pie"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1044,8 +1051,8 @@ const cottageSeed = [
         firstName:"Kal",
         middleName:"Clark",
         lastName:"El",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Pastries", "Sweet breads, muffins"],
+        inventory: ["pear tarts", "apple pies"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1067,8 +1074,8 @@ const cottageSeed = [
         firstName:"Bruce",
         middleName:"",
         lastName:"Wayne",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Candy", "Pastries"],
+        inventory: ["dark chocolate bars (99% cacao)", "dark chocolate pop tarts, like mom never got the chance to make..."],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1090,8 +1097,8 @@ const cottageSeed = [
         firstName:"Alfred",
         middleName:"",
         lastName:"Pennyworth",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Roasted coffee or dry tea"],
+        inventory: ["pennyworth tea", "earl grey tea blend"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1113,8 +1120,8 @@ const cottageSeed = [
         firstName:"Hal",
         middleName:"",
         lastName:"Jordan",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Coated and uncoated nuts"],
+        inventory: ["chimichurri coated pistachios"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1136,8 +1143,8 @@ const cottageSeed = [
         firstName:"Walter",
         middleName:"",
         lastName:"Kovacs",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Coated and uncoated nuts"],
+        inventory: ["roasted peanuts, or are they?"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1159,8 +1166,8 @@ const cottageSeed = [
         firstName:"Cassandra",
         middleName:"",
         lastName:"Cain",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Pickles"],
+        inventory: ["bat-shaped pickles"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1182,8 +1189,8 @@ const cottageSeed = [
         firstName:"Jon",
         middleName:"",
         lastName:"Osterman",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Breads, rolls, biscuits"],
+        inventory: ["infinite rye", "shroedinger's baguette"],
         dateAdded: new Date(Date.now())
         },
       {
@@ -1205,8 +1212,8 @@ const cottageSeed = [
         firstName:"Aimee",
         middleName:"",
         lastName:"Black",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Roasted coffee or dry tea"],
+        inventory: ["dark roast coffee","plain jane breakfest blend"],
         dateAdded: new Date(Date.now())
       },
        {
@@ -1228,8 +1235,8 @@ const cottageSeed = [
         firstName:"Brian",
         middleName:"",
         lastName:"Stevens",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Dehydrated fruit or vegetables, including dried beans"],
+        inventory: ["dried black-eyed peas","dried pinto beans"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -1251,8 +1258,8 @@ const cottageSeed = [
         firstName:"Jaimee",
         middleName:"",
         lastName:"",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Canned Jams and Jellies"],
+        inventory: ["Jaimee's Purple Jam", "Jaimee's Jalapeno Jam"],
         dateAdded: new Date(Date.now())
       },
        {
@@ -1274,8 +1281,8 @@ const cottageSeed = [
         firstName:"Piper",
         middleName:"",
         lastName:"Harris",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Popcorn and popcorn snacks"],
+        inventory: ["buttered popcorn","salted popcorn"],
         dateAdded: new Date(Date.now())
       },
        {
@@ -1297,8 +1304,8 @@ const cottageSeed = [
         firstName:"Spencer",
         middleName:"",
         lastName:"Jefferson",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Candy", "Cookies"],
+        inventory: ["fruit soft chews", "sugar cookies"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -1320,8 +1327,8 @@ const cottageSeed = [
         firstName:"",
         middleName:"",
         lastName:"",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Breads, rolls, biscuits", "Sweet breads, muffins"],
+        inventory: ["marbled rye", "seed-sastion loaves", "buttermilk biscuits"],
         dateAdded: new Date(Date.now())
       },
         {
@@ -1343,8 +1350,8 @@ const cottageSeed = [
         firstName:"Oliver",
         middleName:"",
         lastName:"Smith",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Unroasted nut butters", "Coated and uncoated nuts"],
+        inventory: ["cashew butter","cashews", "pecan butter"],
         dateAdded: new Date(Date.now())
       },
        {
@@ -1366,8 +1373,8 @@ const cottageSeed = [
         firstName:"Monica",
         middleName:"",
         lastName:"Geller",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Fruit pies", "Pastries"],
+        inventory: ["apricot glazed pear tart with thyme","not your momma's apple pie"],
         dateAdded: new Date(Date.now())
       },
        {
@@ -1389,8 +1396,8 @@ const cottageSeed = [
         firstName:"Craig",
         middleName:"",
         lastName:"Webber",
-        category: "Roasted coffee or dry tea",
-        inventory: ["Sanka","Lipton"],
+        category: ["Cereal, including granola", "Cookies"],
+        inventory: ["granola cereal","granola cookies"],
         dateAdded: new Date(Date.now())
       }
 
