@@ -17,6 +17,7 @@ class MerchantPortal extends React.Component {
         <div className="row">
           <div className="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12">
             <h2 className="MHede">Welcome, {this.props.merchant}</h2>
+            <h4 className="MType">Shop Name:  <input type="text" onChange={this.props.inputChangeHandler} data-group="shop" data-attribute="businessName" value={this.props.businessName} id="businessName" /></h4>
             <h4 className="MType">Shop Street Address:  <input type="text" onChange={this.props.inputChangeHandler} data-group="address" data-attribute="streetAddress1" value={this.props.address.streetAddress1} id="UserAddress" /></h4>
             <h4 className="MType">Shop Apt/Unit #:  <input type="text" onChange={this.props.inputChangeHandler} data-group="address" data-attribute="streetAddress2" value={this.props.address.streetAddress2} id="UserAddress" /></h4>
             <h4 className="MType">Shop City:  <input type="text" onChange={this.props.inputChangeHandler} data-group="address" data-attribute="city" value={this.props.address.city} id="UserAddress" /></h4>

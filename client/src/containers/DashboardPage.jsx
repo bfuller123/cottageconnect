@@ -25,7 +25,10 @@ class DashboardPage extends React.Component {
         zipCode: ''
       },
       categories: [],
-      goods: []
+      goods: [],
+      shop: {
+        businessName: ''
+      }
     };
   }
 
@@ -90,7 +93,8 @@ class DashboardPage extends React.Component {
         state : this.state.address.state,
         zipCode : this.state.address.zipCode,
         category : this.state.categories,
-        inventory: this.state.goods
+        inventory: this.state.goods,
+        businessName: this.state.shop.businessName
       }
     })
     .then((response) => {
@@ -126,7 +130,7 @@ class DashboardPage extends React.Component {
    * Render the component.
    */
   render() {
-    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} btnClickHandler={() => {this.updateMerchant()}} addClick={(e) => {this.addClicked(e)}} removeClick={(e) => {this.removeClicked(e)}} itemChanged={(e) => {this.itemChange(e)}} /></div>);
+    return (<div><Dashboard secretData={this.state.secretData} user={this.state.user} address={this.state.address} categories={this.state.categories} goods={this.state.goods} businessName={this.state.shop.businessName} btnClickHandler={() => {this.updateMerchant()}} addClick={(e) => {this.addClicked(e)}} removeClick={(e) => {this.removeClicked(e)}} itemChanged={(e) => {this.itemChange(e)}} /></div>);
   }
 
 }
